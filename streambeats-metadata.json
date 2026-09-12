@@ -1,6 +1,3633 @@
 {
   "source": "https://streambeats.com",
-  "genres": {},
-  "albums": {},
-  "local_matches": {}
+  "synced_at": "2026-09-12T18:04:06.256833+00:00",
+  "genre_count": 11,
+  "album_count": 83,
+  "genres": {
+    "lofi": {
+      "slug": "lofi",
+      "name": "Lofi",
+      "url": "https://streambeats.com/genre/lofi",
+      "description": "Chill, lo-fi beats perfect for background vibes during Just Chatting streams or study sessions.",
+      "official_track_count": 555,
+      "official_album_count": 19,
+      "image_url": "https://streambeats.com/images/genres/lofi.jpg",
+      "image": "streambeats/genres/lofi.jpg",
+      "name_original": "Lofi",
+      "name_fr": "Lofi",
+      "description_original": "Chill, lo-fi beats perfect for background vibes during Just Chatting streams or study sessions.",
+      "description_fr": "Des rythmes relaxants et lo-fi parfaits pour les ambiances de fond lors des flux Just Chatting ou des séances d'étude."
+    },
+    "edm": {
+      "slug": "edm",
+      "name": "EDM",
+      "url": "https://streambeats.com/genre/edm",
+      "description": "High-energy electronic drops and builds to keep the energy up during intense gaming sessions.",
+      "official_track_count": 379,
+      "official_album_count": 16,
+      "image_url": "https://streambeats.com/images/genres/edm.jpg",
+      "image": "streambeats/genres/edm.jpg",
+      "name_original": "EDM",
+      "name_fr": "EDM",
+      "description_original": "High-energy electronic drops and builds to keep the energy up during intense gaming sessions.",
+      "description_fr": "L'électronique à haute énergie diminue et s'accumule pour maintenir l'énergie pendant les sessions de jeu intenses."
+    },
+    "hip-hop": {
+      "slug": "hip-hop",
+      "name": "Hip-Hop",
+      "url": "https://streambeats.com/genre/hip-hop",
+      "description": "Urban beats with warm basslines and golden-era energy. Great for highlight reels and hype moments.",
+      "official_track_count": 346,
+      "official_album_count": 12,
+      "image_url": "https://streambeats.com/images/genres/hiphop.jpg",
+      "image": "streambeats/genres/hip-hop.jpg",
+      "name_original": "Hip-Hop",
+      "name_fr": "Hip-Hop",
+      "description_original": "Urban beats with warm basslines and golden-era energy. Great for highlight reels and hype moments.",
+      "description_fr": "Des rythmes urbains avec des lignes de basse chaleureuses et une énergie de l’âge d’or. Idéal pour les moments forts et les moments de battage médiatique."
+    },
+    "synthwave": {
+      "slug": "synthwave",
+      "name": "Synthwave",
+      "url": "https://streambeats.com/genre/synthwave",
+      "description": "Retro-futuristic neon sounds straight from the 80s. Perfect for cyberpunk and sci-fi vibes.",
+      "official_track_count": 185,
+      "official_album_count": 8,
+      "image_url": "https://streambeats.com/images/genres/synthwave.jpg",
+      "image": "streambeats/genres/synthwave.jpg",
+      "name_original": "Synthwave",
+      "name_fr": "Synthwave",
+      "description_original": "Retro-futuristic neon sounds straight from the 80s. Perfect for cyberpunk and sci-fi vibes.",
+      "description_fr": "Le néon rétro-futuriste vient tout droit des années 80. Parfait pour les ambiances cyberpunk et science-fiction."
+    },
+    "christmas": {
+      "slug": "christmas",
+      "name": "Christmas",
+      "url": "https://streambeats.com/genre/christmas",
+      "description": "Seasonal holiday tracks for festive streams and December vibes.",
+      "official_track_count": 80,
+      "official_album_count": 8,
+      "image_url": "https://streambeats.com/images/genres/christmas.jpg",
+      "image": "streambeats/genres/christmas.jpg",
+      "name_original": "Christmas",
+      "name_fr": "Noël",
+      "description_original": "Seasonal holiday tracks for festive streams and December vibes.",
+      "description_fr": "Des morceaux de vacances saisonniers pour des streams festifs et une ambiance de décembre."
+    },
+    "chiptune": {
+      "slug": "chiptune",
+      "name": "Chiptune",
+      "url": "https://streambeats.com/genre/chiptune",
+      "description": "8-bit and retro game-inspired electronic music. Pixelated melodies and arcade-era energy.",
+      "official_track_count": 51,
+      "official_album_count": 2,
+      "image_url": "https://streambeats.com/images/genres/chiptune.jpg",
+      "image": "streambeats/genres/chiptune.jpg",
+      "name_original": "Chiptune",
+      "name_fr": "Chiptune",
+      "description_original": "8-bit and retro game-inspired electronic music. Pixelated melodies and arcade-era energy.",
+      "description_fr": "Musique électronique inspirée des jeux 8 bits et rétro. Mélodies pixélisées et énergie de l’ère arcade."
+    },
+    "ambient": {
+      "slug": "ambient",
+      "name": "Ambient",
+      "url": "https://streambeats.com/genre/ambient",
+      "description": "Spacious, serene soundscapes for calm moments and atmospheric backgrounds.",
+      "official_track_count": 30,
+      "official_album_count": 1,
+      "image_url": "https://streambeats.com/images/genres/ambient.jpg",
+      "image": "streambeats/genres/ambient.jpg",
+      "name_original": "Ambient",
+      "name_fr": "Ambiant",
+      "description_original": "Spacious, serene soundscapes for calm moments and atmospheric backgrounds.",
+      "description_fr": "Des paysages sonores spacieux et sereins pour des moments calmes et des arrière-plans atmosphériques."
+    },
+    "hifi": {
+      "slug": "hifi",
+      "name": "Hifi",
+      "url": "https://streambeats.com/genre/hifi",
+      "description": "Crisp, polished production with rich detail. The pristine counterpart to lofi.",
+      "official_track_count": 30,
+      "official_album_count": 1,
+      "image_url": "https://streambeats.com/images/genres/hifi.jpg",
+      "image": "streambeats/genres/hifi.jpg",
+      "name_original": "Hifi",
+      "name_fr": "Hi-Fi",
+      "description_original": "Crisp, polished production with rich detail. The pristine counterpart to lofi.",
+      "description_fr": "Production nette et polie avec des détails riches. L'homologue immaculé du lofi."
+    },
+    "indy-pop": {
+      "slug": "indy-pop",
+      "name": "Indy Pop",
+      "url": "https://streambeats.com/genre/indy-pop",
+      "description": "Bright, melodic indie pop with vocal hooks and modern energy.",
+      "official_track_count": 26,
+      "official_album_count": 6,
+      "image_url": "https://streambeats.com/images/genres/indypop.jpg",
+      "image": "streambeats/genres/indy-pop.jpg",
+      "name_original": "Indy Pop",
+      "name_fr": "Pop indé",
+      "description_original": "Bright, melodic indie pop with vocal hooks and modern energy.",
+      "description_fr": "Une pop indie lumineuse et mélodique avec des accroches vocales et une énergie moderne."
+    },
+    "rock": {
+      "slug": "rock",
+      "name": "Rock",
+      "url": "https://streambeats.com/genre/rock",
+      "description": "Guitar-driven energy and bold riffs. Perfect for action games and hype intros.",
+      "official_track_count": 23,
+      "official_album_count": 3,
+      "image_url": "https://streambeats.com/images/genres/rock.jpg",
+      "image": "streambeats/genres/rock.jpg",
+      "name_original": "Rock",
+      "name_fr": "Rock",
+      "description_original": "Guitar-driven energy and bold riffs. Perfect for action games and hype intros.",
+      "description_fr": "Une énergie portée par la guitare et des riffs audacieux. Parfait pour les jeux d’action et les intros à la mode."
+    },
+    "collabs": {
+      "slug": "collabs",
+      "name": "Collabs",
+      "url": "https://streambeats.com/genre/collabs",
+      "description": "Featured collaborations with guest artists, original songs and remixes.",
+      "official_track_count": 12,
+      "official_album_count": 7,
+      "image_url": "https://streambeats.com/images/genres/collabs.jpg",
+      "image": "streambeats/genres/collabs.jpg",
+      "name_original": "Collabs",
+      "name_fr": "Collaborations",
+      "description_original": "Featured collaborations with guest artists, original songs and remixes.",
+      "description_fr": "Collaborations en vedette avec des artistes invités, chansons originales et remixes."
+    }
+  },
+  "albums": {
+    "diamonds": {
+      "slug": "diamonds",
+      "name": "Diamonds",
+      "url": "https://streambeats.com/album/diamonds",
+      "genre_slug": "ambient",
+      "genre": "Ambient",
+      "artist": "StreamBeats by Harris Heller",
+      "official_track_count": 30,
+      "duration": "69:21",
+      "year": 2021,
+      "moods": [
+        "uplifting"
+      ],
+      "image_url": "https://i.scdn.co/image/ab67616d0000b273c6d4e45d19372bd981200662",
+      "spotify": "https://open.spotify.com/album/4cC8JfwhUjHviJJWUgZWxn",
+      "bandcamp": "https://streambeats.bandcamp.com/album/diamonds",
+      "google_drive": "https://drive.google.com/drive/folders/196AfI6vYiSwKqb7ATKKg4J_4PcwG84jC",
+      "image": "streambeats/albums/diamonds.jpg",
+      "similar_albums": [
+        "4cC8JfwhUjHviJJWUgZWxn"
+      ],
+      "name_original": "Diamonds",
+      "name_fr": "Diamants",
+      "genre_original": "Ambient",
+      "genre_fr": "Ambiant",
+      "moods_original": [
+        "uplifting"
+      ],
+      "moods_fr": [
+        "Motivant"
+      ]
+    },
+    "arcade": {
+      "slug": "arcade",
+      "name": "Arcade",
+      "url": "https://streambeats.com/album/arcade",
+      "genre_slug": "chiptune",
+      "genre": "Chiptune",
+      "artist": "StreamBeats by Harris Heller",
+      "official_track_count": 26,
+      "duration": "57:43",
+      "year": 2021,
+      "moods": [
+        "chill"
+      ],
+      "image_url": "https://i.scdn.co/image/ab67616d0000b2736705b3f3f8a981bef555785c",
+      "spotify": "https://open.spotify.com/album/05D12mkv1CzT6mZEYhER1k",
+      "bandcamp": "https://streambeats.bandcamp.com/album/arcade",
+      "google_drive": "https://drive.google.com/drive/folders/196AfI6vYiSwKqb7ATKKg4J_4PcwG84jC",
+      "image": "streambeats/albums/arcade.jpg",
+      "similar_albums": [
+        "05D12mkv1CzT6mZEYhER1k",
+        "pixel"
+      ],
+      "name_original": "Arcade",
+      "name_fr": "Arcade",
+      "genre_original": "Chiptune",
+      "genre_fr": "Chiptune",
+      "moods_original": [
+        "chill"
+      ],
+      "moods_fr": [
+        "Détendu"
+      ]
+    },
+    "pixel": {
+      "slug": "pixel",
+      "name": "Pixel",
+      "url": "https://streambeats.com/album/pixel",
+      "genre_slug": "chiptune",
+      "genre": "Chiptune",
+      "artist": "StreamBeats by Harris Heller",
+      "official_track_count": 25,
+      "duration": "56:26",
+      "year": 2021,
+      "moods": [
+        "chill"
+      ],
+      "image_url": "https://i.scdn.co/image/ab67616d0000b273b22740cc005fe2bbe36cfda1",
+      "spotify": "https://open.spotify.com/album/0GKR8z2FNNY6Zq3oQzYV72",
+      "bandcamp": "https://streambeats.bandcamp.com/album/pixel",
+      "google_drive": "https://drive.google.com/drive/folders/196AfI6vYiSwKqb7ATKKg4J_4PcwG84jC",
+      "image": "streambeats/albums/pixel.jpg",
+      "similar_albums": [
+        "0GKR8z2FNNY6Zq3oQzYV72",
+        "arcade"
+      ],
+      "name_original": "Pixel",
+      "name_fr": "Pixels",
+      "genre_original": "Chiptune",
+      "genre_fr": "Chiptune",
+      "moods_original": [
+        "chill"
+      ],
+      "moods_fr": [
+        "Détendu"
+      ]
+    },
+    "if-i-fuck-up-this-christmas-naughty-version": {
+      "slug": "if-i-fuck-up-this-christmas-naughty-version",
+      "name": "If I Fuck Up This Christmas (Naughty Version)",
+      "url": "https://streambeats.com/album/if-i-fuck-up-this-christmas-naughty-version",
+      "genre_slug": "christmas",
+      "genre": "Christmas",
+      "artist": "StreamBeats Originals, Ryan King",
+      "official_track_count": 1,
+      "duration": "2:17",
+      "year": 2022,
+      "moods": [
+        "chill"
+      ],
+      "image_url": "https://i.scdn.co/image/ab67616d0000b273adafb61f3759b08c5dc7dcd4",
+      "spotify": "https://open.spotify.com/album/09uXXHL8TkDFztE9YS1JsQ",
+      "bandcamp": "https://streambeats.bandcamp.com/track/if-i-fuck-up-this-christmas-naughty-version",
+      "google_drive": "https://drive.google.com/drive/folders/196AfI6vYiSwKqb7ATKKg4J_4PcwG84jC",
+      "image": "streambeats/albums/if-i-fuck-up-this-christmas-naughty-version.jpg",
+      "similar_albums": [
+        "09uXXHL8TkDFztE9YS1JsQ",
+        "a-streambeats-and-friends-christmas",
+        "a-streambeats-and-friends-christmas-instrumental",
+        "a-very-lo-fi-christmas",
+        "candy-shop"
+      ],
+      "name_original": "If I Fuck Up This Christmas (Naughty Version)",
+      "name_fr": "Si je merde ce Noël (version coquine)",
+      "genre_original": "Christmas",
+      "genre_fr": "Noël",
+      "moods_original": [
+        "chill"
+      ],
+      "moods_fr": [
+        "Détendu"
+      ]
+    },
+    "if-i-mess-up-this-christmas": {
+      "slug": "if-i-mess-up-this-christmas",
+      "name": "If I Mess Up This Christmas",
+      "url": "https://streambeats.com/album/if-i-mess-up-this-christmas",
+      "genre_slug": "christmas",
+      "genre": "Christmas",
+      "artist": "StreamBeats Originals, Tuonto, Ryan King",
+      "official_track_count": 3,
+      "duration": "8:47",
+      "year": 2022,
+      "moods": [
+        "chill"
+      ],
+      "image_url": "https://i.scdn.co/image/ab67616d0000b273141a2703825247a0c8a08428",
+      "spotify": "https://open.spotify.com/album/0QjqZkjTC49biAIVCnuBpm",
+      "bandcamp": "https://streambeats.bandcamp.com/album/if-i-mess-up-this-christmas",
+      "google_drive": "https://drive.google.com/drive/folders/196AfI6vYiSwKqb7ATKKg4J_4PcwG84jC",
+      "image": "streambeats/albums/if-i-mess-up-this-christmas.jpg",
+      "similar_albums": [
+        "0QjqZkjTC49biAIVCnuBpm",
+        "a-streambeats-and-friends-christmas",
+        "a-streambeats-and-friends-christmas-instrumental",
+        "a-very-lo-fi-christmas",
+        "candy-shop"
+      ],
+      "name_original": "If I Mess Up This Christmas",
+      "name_fr": "Si je me trompe ce Noël",
+      "genre_original": "Christmas",
+      "genre_fr": "Noël",
+      "moods_original": [
+        "chill"
+      ],
+      "moods_fr": [
+        "Détendu"
+      ]
+    },
+    "if-i-mess-up-this-christmas-instrumental": {
+      "slug": "if-i-mess-up-this-christmas-instrumental",
+      "name": "If I Mess Up This Christmas (Instrumental)",
+      "url": "https://streambeats.com/album/if-i-mess-up-this-christmas-instrumental",
+      "genre_slug": "christmas",
+      "genre": "Christmas",
+      "artist": "StreamBeats Originals, Ryan King, Tuonto",
+      "official_track_count": 3,
+      "duration": "8:47",
+      "year": 2022,
+      "moods": [
+        "chill"
+      ],
+      "image_url": "https://i.scdn.co/image/ab67616d0000b273d94abef4da915dcad9394bf8",
+      "spotify": "https://open.spotify.com/album/2VIDmjH3D5gZPrsGg3getw",
+      "bandcamp": "https://streambeats.bandcamp.com/album/if-i-mess-up-this-christmas-instrumental",
+      "google_drive": "https://drive.google.com/drive/folders/196AfI6vYiSwKqb7ATKKg4J_4PcwG84jC",
+      "image": "streambeats/albums/if-i-mess-up-this-christmas-instrumental.jpg",
+      "similar_albums": [
+        "2VIDmjH3D5gZPrsGg3getw",
+        "a-streambeats-and-friends-christmas",
+        "a-streambeats-and-friends-christmas-instrumental",
+        "a-very-lo-fi-christmas",
+        "candy-shop"
+      ],
+      "name_original": "If I Mess Up This Christmas (Instrumental)",
+      "name_fr": "Si je me trompe ce Noël (Instrumental)",
+      "genre_original": "Christmas",
+      "genre_fr": "Noël",
+      "moods_original": [
+        "chill"
+      ],
+      "moods_fr": [
+        "Détendu"
+      ]
+    },
+    "a-streambeats-and-friends-christmas": {
+      "slug": "a-streambeats-and-friends-christmas",
+      "name": "A StreamBeats and Friends Christmas",
+      "url": "https://streambeats.com/album/a-streambeats-and-friends-christmas",
+      "genre_slug": "christmas",
+      "genre": "Christmas",
+      "artist": "StreamBeats Originals",
+      "official_track_count": 4,
+      "duration": "11:48",
+      "year": 2021,
+      "moods": [
+        "chill"
+      ],
+      "image_url": "https://i.scdn.co/image/ab67616d0000b2739bd76a64734cb8b6ca626efe",
+      "spotify": "https://open.spotify.com/album/0FQsW95sMSurooZqx5d9oI",
+      "bandcamp": "https://streambeats.bandcamp.com/album/a-streambeats-and-friends-christmas",
+      "google_drive": "https://drive.google.com/drive/folders/196AfI6vYiSwKqb7ATKKg4J_4PcwG84jC",
+      "image": "streambeats/albums/a-streambeats-and-friends-christmas.jpg",
+      "similar_albums": [
+        "0FQsW95sMSurooZqx5d9oI",
+        "a-streambeats-and-friends-christmas-instrumental",
+        "a-very-lo-fi-christmas",
+        "candy-shop",
+        "evergreen"
+      ],
+      "name_original": "A StreamBeats and Friends Christmas",
+      "name_fr": "Un Noël StreamBeats et Friends",
+      "genre_original": "Christmas",
+      "genre_fr": "Noël",
+      "moods_original": [
+        "chill"
+      ],
+      "moods_fr": [
+        "Détendu"
+      ]
+    },
+    "a-streambeats-and-friends-christmas-instrumental": {
+      "slug": "a-streambeats-and-friends-christmas-instrumental",
+      "name": "A StreamBeats and Friends Christmas (Instrumental)",
+      "url": "https://streambeats.com/album/a-streambeats-and-friends-christmas-instrumental",
+      "genre_slug": "christmas",
+      "genre": "Christmas",
+      "artist": "StreamBeats Originals",
+      "official_track_count": 4,
+      "duration": "11:48",
+      "year": 2021,
+      "moods": [
+        "chill"
+      ],
+      "image_url": "https://i.scdn.co/image/ab67616d0000b273abd09f3ba698b85d9c34f888",
+      "spotify": "https://open.spotify.com/album/0JDLoldZ1x6WcbZMRolxj4",
+      "bandcamp": "https://streambeats.bandcamp.com/album/a-streambeats-and-friends-christmas-instrumental",
+      "google_drive": "https://drive.google.com/drive/folders/196AfI6vYiSwKqb7ATKKg4J_4PcwG84jC",
+      "image": "streambeats/albums/a-streambeats-and-friends-christmas-instrumental.jpg",
+      "similar_albums": [
+        "0JDLoldZ1x6WcbZMRolxj4",
+        "a-streambeats-and-friends-christmas",
+        "a-very-lo-fi-christmas",
+        "candy-shop",
+        "evergreen"
+      ],
+      "name_original": "A StreamBeats and Friends Christmas (Instrumental)",
+      "name_fr": "Un Noël StreamBeats and Friends (Instrumental)",
+      "genre_original": "Christmas",
+      "genre_fr": "Noël",
+      "moods_original": [
+        "chill"
+      ],
+      "moods_fr": [
+        "Détendu"
+      ]
+    },
+    "candy-shop": {
+      "slug": "candy-shop",
+      "name": "Candy Shop",
+      "url": "https://streambeats.com/album/candy-shop",
+      "genre_slug": "christmas",
+      "genre": "Christmas",
+      "artist": "StreamBeats by Harris Heller",
+      "official_track_count": 15,
+      "duration": "32:55",
+      "year": 2021,
+      "moods": [
+        "chill"
+      ],
+      "image_url": "https://i.scdn.co/image/ab67616d0000b273e8cc5c96dfa38aa8a7c35794",
+      "spotify": "https://open.spotify.com/album/63O44NG2QdL9QySc3Ga5vf",
+      "bandcamp": "https://streambeats.bandcamp.com/album/candy-shop",
+      "google_drive": "https://drive.google.com/drive/folders/196AfI6vYiSwKqb7ATKKg4J_4PcwG84jC",
+      "image": "streambeats/albums/candy-shop.jpg",
+      "similar_albums": [
+        "63O44NG2QdL9QySc3Ga5vf",
+        "a-streambeats-and-friends-christmas",
+        "a-streambeats-and-friends-christmas-instrumental",
+        "a-very-lo-fi-christmas",
+        "evergreen"
+      ],
+      "name_original": "Candy Shop",
+      "name_fr": "Magasin de bonbons",
+      "genre_original": "Christmas",
+      "genre_fr": "Noël",
+      "moods_original": [
+        "chill"
+      ],
+      "moods_fr": [
+        "Détendu"
+      ]
+    },
+    "evergreen": {
+      "slug": "evergreen",
+      "name": "Evergreen",
+      "url": "https://streambeats.com/album/evergreen",
+      "genre_slug": "christmas",
+      "genre": "Christmas",
+      "artist": "StreamBeats by Harris Heller",
+      "official_track_count": 20,
+      "duration": "47:16",
+      "year": 2021,
+      "moods": [
+        "chill"
+      ],
+      "image_url": "https://i.scdn.co/image/ab67616d0000b2733a25c9b81c46474b3d368e49",
+      "spotify": "https://open.spotify.com/album/0SrNOsBzwCGc7F4Zqffvp4",
+      "bandcamp": "https://streambeats.bandcamp.com/album/evergreen",
+      "google_drive": "https://drive.google.com/drive/folders/196AfI6vYiSwKqb7ATKKg4J_4PcwG84jC",
+      "image": "streambeats/albums/evergreen.jpg",
+      "similar_albums": [
+        "0SrNOsBzwCGc7F4Zqffvp4",
+        "a-streambeats-and-friends-christmas",
+        "a-streambeats-and-friends-christmas-instrumental",
+        "a-very-lo-fi-christmas",
+        "candy-shop"
+      ],
+      "name_original": "Evergreen",
+      "name_fr": "À feuilles persistantes",
+      "genre_original": "Christmas",
+      "genre_fr": "Noël",
+      "moods_original": [
+        "chill"
+      ],
+      "moods_fr": [
+        "Détendu"
+      ]
+    },
+    "a-very-lo-fi-christmas": {
+      "slug": "a-very-lo-fi-christmas",
+      "name": "A Very Lo-Fi Christmas",
+      "url": "https://streambeats.com/album/a-very-lo-fi-christmas",
+      "genre_slug": "christmas",
+      "genre": "Christmas",
+      "artist": "StreamBeats by Harris Heller",
+      "official_track_count": 30,
+      "duration": "73:55",
+      "year": 2020,
+      "moods": [
+        "chill"
+      ],
+      "image_url": "https://i.scdn.co/image/ab67616d0000b27358c4d9e7cba54b36b77090bd",
+      "spotify": "https://open.spotify.com/album/2tlx698ZVPrO43XcAfse3g",
+      "bandcamp": "https://streambeats.bandcamp.com/album/a-very-lo-fi-christmas",
+      "google_drive": "https://drive.google.com/drive/folders/196AfI6vYiSwKqb7ATKKg4J_4PcwG84jC",
+      "image": "streambeats/albums/a-very-lo-fi-christmas.jpg",
+      "similar_albums": [
+        "2tlx698ZVPrO43XcAfse3g",
+        "a-streambeats-and-friends-christmas",
+        "a-streambeats-and-friends-christmas-instrumental",
+        "candy-shop",
+        "evergreen"
+      ],
+      "name_original": "A Very Lo-Fi Christmas",
+      "name_fr": "Un Noël très Lo-Fi",
+      "genre_original": "Christmas",
+      "genre_fr": "Noël",
+      "moods_original": [
+        "chill"
+      ],
+      "moods_fr": [
+        "Détendu"
+      ]
+    },
+    "hyacinth": {
+      "slug": "hyacinth",
+      "name": "hyacinth",
+      "url": "https://streambeats.com/album/hyacinth",
+      "genre_slug": "collabs",
+      "genre": "Collabs",
+      "artist": "StreamBeats Originals, LilyPichu",
+      "official_track_count": 1,
+      "duration": "3:36",
+      "year": 2024,
+      "moods": [
+        "chill"
+      ],
+      "image_url": "https://i.scdn.co/image/ab67616d0000b273634da251af2e4010b007c160",
+      "spotify": "https://open.spotify.com/album/29h3Uo6hM18M2W022sj1Io",
+      "bandcamp": "https://streambeats.bandcamp.com/track/hyacinth",
+      "google_drive": "https://drive.google.com/drive/folders/196AfI6vYiSwKqb7ATKKg4J_4PcwG84jC",
+      "image": "streambeats/albums/hyacinth.jpg",
+      "similar_albums": [
+        "29h3Uo6hM18M2W022sj1Io",
+        "already-missing-you",
+        "do-this-on-my-own",
+        "fly-me-away",
+        "hyacinth-instrumental"
+      ],
+      "name_original": "hyacinth",
+      "name_fr": "jacinthe",
+      "genre_original": "Collabs",
+      "genre_fr": "Collaborations",
+      "moods_original": [
+        "chill"
+      ],
+      "moods_fr": [
+        "Détendu"
+      ]
+    },
+    "hyacinth-instrumental": {
+      "slug": "hyacinth-instrumental",
+      "name": "hyacinth (Instrumental)",
+      "url": "https://streambeats.com/album/hyacinth-instrumental",
+      "genre_slug": "collabs",
+      "genre": "Collabs",
+      "artist": "StreamBeats Originals",
+      "official_track_count": 1,
+      "duration": "3:36",
+      "year": 2024,
+      "moods": [
+        "chill"
+      ],
+      "image_url": "https://i.scdn.co/image/ab67616d0000b273523f76950101cb940ad41a6d",
+      "spotify": "https://open.spotify.com/album/2qpIPLF51Dgb5zucm1pFxl",
+      "bandcamp": "https://streambeats.bandcamp.com/track/hyacinth-instrumental",
+      "google_drive": "https://drive.google.com/drive/folders/196AfI6vYiSwKqb7ATKKg4J_4PcwG84jC",
+      "image": "streambeats/albums/hyacinth-instrumental.jpg",
+      "similar_albums": [
+        "2qpIPLF51Dgb5zucm1pFxl",
+        "already-missing-you",
+        "do-this-on-my-own",
+        "fly-me-away",
+        "hyacinth"
+      ],
+      "name_original": "hyacinth (Instrumental)",
+      "name_fr": "jacinthe (Instrumental)",
+      "genre_original": "Collabs",
+      "genre_fr": "Collaborations",
+      "moods_original": [
+        "chill"
+      ],
+      "moods_fr": [
+        "Détendu"
+      ]
+    },
+    "already-missing-you": {
+      "slug": "already-missing-you",
+      "name": "Already Missing You",
+      "url": "https://streambeats.com/album/already-missing-you",
+      "genre_slug": "collabs",
+      "genre": "Collabs",
+      "artist": "StreamBeats Originals, Fuslie",
+      "official_track_count": 2,
+      "duration": "5:33",
+      "year": 2023,
+      "moods": [
+        "chill"
+      ],
+      "image_url": "https://i.scdn.co/image/ab67616d0000b273a9c7a4186a68bb09b4a1ad5b",
+      "spotify": "https://open.spotify.com/album/2PJCGmzynwgbNLbyNtuzSt",
+      "bandcamp": "https://streambeats.bandcamp.com/album/already-missing-you",
+      "google_drive": "https://drive.google.com/drive/folders/196AfI6vYiSwKqb7ATKKg4J_4PcwG84jC",
+      "image": "streambeats/albums/already-missing-you.jpg",
+      "similar_albums": [
+        "2PJCGmzynwgbNLbyNtuzSt",
+        "do-this-on-my-own",
+        "fly-me-away",
+        "hyacinth",
+        "hyacinth-instrumental"
+      ],
+      "name_original": "Already Missing You",
+      "name_fr": "Tu me manques déjà",
+      "genre_original": "Collabs",
+      "genre_fr": "Collaborations",
+      "moods_original": [
+        "chill"
+      ],
+      "moods_fr": [
+        "Détendu"
+      ]
+    },
+    "the-dawn": {
+      "slug": "the-dawn",
+      "name": "The Dawn",
+      "url": "https://streambeats.com/album/the-dawn",
+      "genre_slug": "collabs",
+      "genre": "Collabs",
+      "artist": "StreamBeats Originals, Fuslie",
+      "official_track_count": 2,
+      "duration": "8:00",
+      "year": 2023,
+      "moods": [
+        "uplifting"
+      ],
+      "image_url": "https://i.scdn.co/image/ab67616d0000b273a3295fc829738ee74ff47e4c",
+      "spotify": "https://open.spotify.com/album/6FLIS7y445hQztqlk9QOIY",
+      "bandcamp": "https://streambeats.bandcamp.com/album/the-dawn",
+      "google_drive": "https://drive.google.com/drive/folders/196AfI6vYiSwKqb7ATKKg4J_4PcwG84jC",
+      "image": "streambeats/albums/the-dawn.jpg",
+      "similar_albums": [
+        "6FLIS7y445hQztqlk9QOIY",
+        "already-missing-you",
+        "do-this-on-my-own",
+        "fly-me-away",
+        "hyacinth"
+      ],
+      "name_original": "The Dawn",
+      "name_fr": "L'aube",
+      "genre_original": "Collabs",
+      "genre_fr": "Collaborations",
+      "moods_original": [
+        "uplifting"
+      ],
+      "moods_fr": [
+        "Motivant"
+      ]
+    },
+    "do-this-on-my-own": {
+      "slug": "do-this-on-my-own",
+      "name": "Do This On My Own",
+      "url": "https://streambeats.com/album/do-this-on-my-own",
+      "genre_slug": "collabs",
+      "genre": "Collabs",
+      "artist": "StreamBeats Originals, Fuslie, Ryan King",
+      "official_track_count": 2,
+      "duration": "6:07",
+      "year": 2022,
+      "moods": [
+        "chill"
+      ],
+      "image_url": "https://i.scdn.co/image/ab67616d0000b273f20e2440109bc0b25203a644",
+      "spotify": "https://open.spotify.com/album/282x2IANm5SkDlydTULwJU",
+      "bandcamp": "https://streambeats.bandcamp.com/album/do-this-on-my-own",
+      "google_drive": "https://drive.google.com/drive/folders/196AfI6vYiSwKqb7ATKKg4J_4PcwG84jC",
+      "image": "streambeats/albums/do-this-on-my-own.jpg",
+      "similar_albums": [
+        "282x2IANm5SkDlydTULwJU",
+        "already-missing-you",
+        "fly-me-away",
+        "hyacinth",
+        "hyacinth-instrumental"
+      ],
+      "name_original": "Do This On My Own",
+      "name_fr": "Faites-le moi-même",
+      "genre_original": "Collabs",
+      "genre_fr": "Collaborations",
+      "moods_original": [
+        "chill"
+      ],
+      "moods_fr": [
+        "Détendu"
+      ]
+    },
+    "fly-me-away": {
+      "slug": "fly-me-away",
+      "name": "Fly Me Away",
+      "url": "https://streambeats.com/album/fly-me-away",
+      "genre_slug": "collabs",
+      "genre": "Collabs",
+      "artist": "StreamBeats Originals, Tuonto",
+      "official_track_count": 2,
+      "duration": "5:10",
+      "year": 2022,
+      "moods": [
+        "chill"
+      ],
+      "image_url": "https://i.scdn.co/image/ab67616d0000b2733f5be6eb14d88c85e222ac0a",
+      "spotify": "https://open.spotify.com/album/7bNbEWxaASiF1AXaqpgPcb",
+      "bandcamp": "https://streambeats.bandcamp.com/album/fly-me-away",
+      "google_drive": "https://drive.google.com/drive/folders/196AfI6vYiSwKqb7ATKKg4J_4PcwG84jC",
+      "image": "streambeats/albums/fly-me-away.jpg",
+      "similar_albums": [
+        "7bNbEWxaASiF1AXaqpgPcb",
+        "already-missing-you",
+        "do-this-on-my-own",
+        "hyacinth",
+        "hyacinth-instrumental"
+      ],
+      "name_original": "Fly Me Away",
+      "name_fr": "Envole-moi",
+      "genre_original": "Collabs",
+      "genre_fr": "Collaborations",
+      "moods_original": [
+        "chill"
+      ],
+      "moods_fr": [
+        "Détendu"
+      ]
+    },
+    "what-if-piano-version": {
+      "slug": "what-if-piano-version",
+      "name": "What If (Piano Version)",
+      "url": "https://streambeats.com/album/what-if-piano-version",
+      "genre_slug": "collabs",
+      "genre": "Collabs",
+      "artist": "Fuslie, StreamBeats Originals",
+      "official_track_count": 2,
+      "duration": "7:39",
+      "year": 2022,
+      "moods": [
+        "chill"
+      ],
+      "image_url": "https://i.scdn.co/image/ab67616d0000b27304b35e1b2027f8b6b0f2fb6e",
+      "spotify": "https://open.spotify.com/album/5EjZp2ZC9QXQ9hg1cInrRv",
+      "bandcamp": "https://streambeats.bandcamp.com/album/what-if-piano-version",
+      "google_drive": "https://drive.google.com/drive/folders/196AfI6vYiSwKqb7ATKKg4J_4PcwG84jC",
+      "image": "streambeats/albums/what-if-piano-version.jpg",
+      "similar_albums": [
+        "5EjZp2ZC9QXQ9hg1cInrRv",
+        "already-missing-you",
+        "do-this-on-my-own",
+        "fly-me-away",
+        "hyacinth"
+      ],
+      "name_original": "What If (Piano Version)",
+      "name_fr": "Et si (version piano)",
+      "genre_original": "Collabs",
+      "genre_fr": "Collaborations",
+      "moods_original": [
+        "chill"
+      ],
+      "moods_fr": [
+        "Détendu"
+      ]
+    },
+    "better-when-i-m-high-remix": {
+      "slug": "better-when-i-m-high-remix",
+      "name": "Better When I'm High (Remix)",
+      "url": "https://streambeats.com/album/better-when-i-m-high-remix",
+      "genre_slug": "edm",
+      "genre": "EDM",
+      "artist": "StreamBeats Originals, April Fooze, Ryan King",
+      "official_track_count": 2,
+      "duration": "6:23",
+      "year": 2024,
+      "moods": [
+        "chill"
+      ],
+      "image_url": "https://i.scdn.co/image/ab67616d0000b27379a5486384cf75badcda1cad",
+      "spotify": "https://open.spotify.com/album/3R6eDizZJKTwfqIAkZ0Jre",
+      "bandcamp": "https://streambeats.bandcamp.com/album/better-when-im-high-remix",
+      "google_drive": "https://drive.google.com/drive/folders/196AfI6vYiSwKqb7ATKKg4J_4PcwG84jC",
+      "image": "streambeats/albums/better-when-i-m-high-remix.jpg",
+      "similar_albums": [
+        "3R6eDizZJKTwfqIAkZ0Jre",
+        "better-when-im-high-remix",
+        "better-when-i-m-high",
+        "dansu",
+        "drop",
+        "insomnia"
+      ],
+      "name_original": "Better When I'm High (Remix)",
+      "name_fr": "Mieux quand je suis défoncé (Remix)",
+      "genre_original": "EDM",
+      "genre_fr": "EDM",
+      "moods_original": [
+        "chill"
+      ],
+      "moods_fr": [
+        "Détendu"
+      ]
+    },
+    "moonwalk": {
+      "slug": "moonwalk",
+      "name": "Moonwalk",
+      "url": "https://streambeats.com/album/moonwalk",
+      "genre_slug": "edm",
+      "genre": "EDM",
+      "artist": "StreamBeats by Harris Heller",
+      "official_track_count": 30,
+      "duration": "78:35",
+      "year": 2024,
+      "moods": [
+        "chill"
+      ],
+      "image_url": "https://i.scdn.co/image/ab67616d0000b27398044dbd0e41626b0df4d1ae",
+      "spotify": "https://open.spotify.com/album/2inxsbgwAvqUY4dIQfO1ru",
+      "bandcamp": "https://streambeats.bandcamp.com/album/moonwalk",
+      "google_drive": "https://drive.google.com/drive/folders/196AfI6vYiSwKqb7ATKKg4J_4PcwG84jC",
+      "image": "streambeats/albums/moonwalk.jpg",
+      "similar_albums": [
+        "2inxsbgwAvqUY4dIQfO1ru",
+        "better-when-i-m-high",
+        "better-when-i-m-high-remix",
+        "dansu",
+        "drop"
+      ],
+      "name_original": "Moonwalk",
+      "name_fr": "Promenade sur la lune",
+      "genre_original": "EDM",
+      "genre_fr": "EDM",
+      "moods_original": [
+        "chill"
+      ],
+      "moods_fr": [
+        "Détendu"
+      ]
+    },
+    "nocturnal": {
+      "slug": "nocturnal",
+      "name": "Nocturnal",
+      "url": "https://streambeats.com/album/nocturnal",
+      "genre_slug": "edm",
+      "genre": "EDM",
+      "artist": "StreamBeats by Harris Heller",
+      "official_track_count": 30,
+      "duration": "75:24",
+      "year": 2024,
+      "moods": [
+        "chill"
+      ],
+      "image_url": "https://i.scdn.co/image/ab67616d0000b27332455e302e27550106cc8eb8",
+      "spotify": "https://open.spotify.com/album/7CgT6xPenzBKqjvBfUKmru",
+      "bandcamp": "https://streambeats.bandcamp.com/album/nocturnal",
+      "google_drive": "https://drive.google.com/drive/folders/196AfI6vYiSwKqb7ATKKg4J_4PcwG84jC",
+      "image": "streambeats/albums/nocturnal.jpg",
+      "similar_albums": [
+        "7CgT6xPenzBKqjvBfUKmru",
+        "better-when-i-m-high",
+        "better-when-i-m-high-remix",
+        "dansu",
+        "drop"
+      ],
+      "name_original": "Nocturnal",
+      "name_fr": "Nocturne",
+      "genre_original": "EDM",
+      "genre_fr": "EDM",
+      "moods_original": [
+        "chill"
+      ],
+      "moods_fr": [
+        "Détendu"
+      ]
+    },
+    "pulse": {
+      "slug": "pulse",
+      "name": "Pulse",
+      "url": "https://streambeats.com/album/pulse",
+      "genre_slug": "edm",
+      "genre": "EDM",
+      "artist": "StreamBeats by Harris Heller",
+      "official_track_count": 30,
+      "duration": "71:51",
+      "year": 2024,
+      "moods": [
+        "intense"
+      ],
+      "image_url": "https://i.scdn.co/image/ab67616d0000b273635bcebc9a8a52ed4a7a7d97",
+      "spotify": "https://open.spotify.com/album/72qpMbf66Ck2F3G10a8Sxk",
+      "bandcamp": "https://streambeats.bandcamp.com/album/pulse",
+      "google_drive": "https://drive.google.com/drive/folders/196AfI6vYiSwKqb7ATKKg4J_4PcwG84jC",
+      "image": "streambeats/albums/pulse.jpg",
+      "similar_albums": [
+        "72qpMbf66Ck2F3G10a8Sxk",
+        "better-when-i-m-high",
+        "better-when-i-m-high-remix",
+        "dansu",
+        "drop"
+      ],
+      "name_original": "Pulse",
+      "name_fr": "Impulsion",
+      "genre_original": "EDM",
+      "genre_fr": "EDM",
+      "moods_original": [
+        "intense"
+      ],
+      "moods_fr": [
+        "Intense"
+      ]
+    },
+    "better-when-i-m-high": {
+      "slug": "better-when-i-m-high",
+      "name": "Better When I'm High",
+      "url": "https://streambeats.com/album/better-when-i-m-high",
+      "genre_slug": "edm",
+      "genre": "EDM",
+      "artist": "April Fooze, Ryan King, StreamBeats Originals",
+      "official_track_count": 2,
+      "duration": "6:49",
+      "year": 2022,
+      "moods": [
+        "chill"
+      ],
+      "image_url": "https://i.scdn.co/image/ab67616d0000b273caeced623c909b8b73b291eb",
+      "spotify": "https://open.spotify.com/album/6Oxu6BnwSCTzxWrfa2GvUm",
+      "bandcamp": "https://streambeats.bandcamp.com/album/better-when-im-high",
+      "google_drive": "https://drive.google.com/drive/folders/196AfI6vYiSwKqb7ATKKg4J_4PcwG84jC",
+      "image": "streambeats/albums/better-when-i-m-high.jpg",
+      "similar_albums": [
+        "6Oxu6BnwSCTzxWrfa2GvUm",
+        "better-when-im-high",
+        "better-when-i-m-high-remix",
+        "dansu",
+        "drop",
+        "insomnia"
+      ],
+      "name_original": "Better When I'm High",
+      "name_fr": "Mieux quand je suis défoncé",
+      "genre_original": "EDM",
+      "genre_fr": "EDM",
+      "moods_original": [
+        "chill"
+      ],
+      "moods_fr": [
+        "Détendu"
+      ]
+    },
+    "low-key": {
+      "slug": "low-key",
+      "name": "Low-key",
+      "url": "https://streambeats.com/album/low-key",
+      "genre_slug": "edm",
+      "genre": "EDM",
+      "artist": "StreamBeats by Harris Heller",
+      "official_track_count": 30,
+      "duration": "67:12",
+      "year": 2021,
+      "moods": [
+        "chill"
+      ],
+      "image_url": "https://i.scdn.co/image/ab67616d0000b27385910627be56863dc1dcc428",
+      "spotify": "https://open.spotify.com/album/0hLjB3gO2JidlUBo1k1Wc0",
+      "bandcamp": "https://streambeats.bandcamp.com/album/low-key",
+      "google_drive": "https://drive.google.com/drive/folders/196AfI6vYiSwKqb7ATKKg4J_4PcwG84jC",
+      "image": "streambeats/albums/low-key.jpg",
+      "similar_albums": [
+        "0hLjB3gO2JidlUBo1k1Wc0",
+        "better-when-i-m-high",
+        "better-when-i-m-high-remix",
+        "dansu",
+        "drop"
+      ],
+      "name_original": "Low-key",
+      "name_fr": "Discret",
+      "genre_original": "EDM",
+      "genre_fr": "EDM",
+      "moods_original": [
+        "chill"
+      ],
+      "moods_fr": [
+        "Détendu"
+      ]
+    },
+    "pastel": {
+      "slug": "pastel",
+      "name": "Pastel",
+      "url": "https://streambeats.com/album/pastel",
+      "genre_slug": "edm",
+      "genre": "EDM",
+      "artist": "StreamBeats by Harris Heller",
+      "official_track_count": 20,
+      "duration": "43:53",
+      "year": 2021,
+      "moods": [
+        "chill"
+      ],
+      "image_url": "https://i.scdn.co/image/ab67616d0000b273bde59db5c7d9fe423c5968af",
+      "spotify": "https://open.spotify.com/album/1uLeg0STjQ28Fp4DDqNefq",
+      "bandcamp": "https://streambeats.bandcamp.com/album/pastel",
+      "google_drive": "https://drive.google.com/drive/folders/196AfI6vYiSwKqb7ATKKg4J_4PcwG84jC",
+      "image": "streambeats/albums/pastel.jpg",
+      "similar_albums": [
+        "1uLeg0STjQ28Fp4DDqNefq",
+        "better-when-i-m-high",
+        "better-when-i-m-high-remix",
+        "dansu",
+        "drop"
+      ],
+      "name_original": "Pastel",
+      "name_fr": "Pastel",
+      "genre_original": "EDM",
+      "genre_fr": "EDM",
+      "moods_original": [
+        "chill"
+      ],
+      "moods_fr": [
+        "Détendu"
+      ]
+    },
+    "insomnia": {
+      "slug": "insomnia",
+      "name": "Insomnia",
+      "url": "https://streambeats.com/album/insomnia",
+      "genre_slug": "edm",
+      "genre": "EDM",
+      "artist": "StreamBeats by Harris Heller",
+      "official_track_count": 25,
+      "duration": "55:28",
+      "year": 2021,
+      "moods": [
+        "happy"
+      ],
+      "image_url": "https://i.scdn.co/image/ab67616d0000b2731f29804e4751c7130cfc5570",
+      "spotify": "https://open.spotify.com/album/14T2FQ0DGQceKPsjAzttga",
+      "bandcamp": "https://streambeats.bandcamp.com/album/insomnia",
+      "google_drive": "https://drive.google.com/drive/folders/196AfI6vYiSwKqb7ATKKg4J_4PcwG84jC",
+      "image": "streambeats/albums/insomnia.jpg",
+      "similar_albums": [
+        "14T2FQ0DGQceKPsjAzttga",
+        "better-when-i-m-high",
+        "better-when-i-m-high-remix",
+        "dansu",
+        "drop"
+      ],
+      "name_original": "Insomnia",
+      "name_fr": "Insomnie",
+      "genre_original": "EDM",
+      "genre_fr": "EDM",
+      "moods_original": [
+        "happy"
+      ],
+      "moods_fr": [
+        "Joyeux"
+      ]
+    },
+    "drop": {
+      "slug": "drop",
+      "name": "Drop",
+      "url": "https://streambeats.com/album/drop",
+      "genre_slug": "edm",
+      "genre": "EDM",
+      "artist": "StreamBeats by Harris Heller",
+      "official_track_count": 25,
+      "duration": "56:21",
+      "year": 2021,
+      "moods": [
+        "chill"
+      ],
+      "image_url": "https://i.scdn.co/image/ab67616d0000b2731225261e31f7b166c73f1566",
+      "spotify": "https://open.spotify.com/album/4dGXfnrR1BzoNvwBQEIAJr",
+      "bandcamp": "https://streambeats.bandcamp.com/album/drop",
+      "google_drive": "https://drive.google.com/drive/folders/196AfI6vYiSwKqb7ATKKg4J_4PcwG84jC",
+      "image": "streambeats/albums/drop.jpg",
+      "similar_albums": [
+        "4dGXfnrR1BzoNvwBQEIAJr",
+        "better-when-i-m-high",
+        "better-when-i-m-high-remix",
+        "dansu",
+        "insomnia"
+      ],
+      "name_original": "Drop",
+      "name_fr": "Baisse",
+      "genre_original": "EDM",
+      "genre_fr": "EDM",
+      "moods_original": [
+        "chill"
+      ],
+      "moods_fr": [
+        "Détendu"
+      ]
+    },
+    "lights": {
+      "slug": "lights",
+      "name": "Lights",
+      "url": "https://streambeats.com/album/lights",
+      "genre_slug": "edm",
+      "genre": "EDM",
+      "artist": "StreamBeats by Harris Heller",
+      "official_track_count": 22,
+      "duration": "50:09",
+      "year": 2021,
+      "moods": [
+        "chill"
+      ],
+      "image_url": "https://i.scdn.co/image/ab67616d0000b273e0275742abc6a2ef48f82b10",
+      "spotify": "https://open.spotify.com/album/2D5BHWFn2XTUGIUuojJE8p",
+      "bandcamp": "https://streambeats.bandcamp.com/album/lights",
+      "google_drive": "https://drive.google.com/drive/folders/196AfI6vYiSwKqb7ATKKg4J_4PcwG84jC",
+      "image": "streambeats/albums/lights.jpg",
+      "similar_albums": [
+        "2D5BHWFn2XTUGIUuojJE8p",
+        "better-when-i-m-high",
+        "better-when-i-m-high-remix",
+        "dansu",
+        "drop"
+      ],
+      "name_original": "Lights",
+      "name_fr": "Lumières",
+      "genre_original": "EDM",
+      "genre_fr": "EDM",
+      "moods_original": [
+        "chill"
+      ],
+      "moods_fr": [
+        "Détendu"
+      ]
+    },
+    "trouble": {
+      "slug": "trouble",
+      "name": "Trouble",
+      "url": "https://streambeats.com/album/trouble",
+      "genre_slug": "edm",
+      "genre": "EDM",
+      "artist": "StreamBeats by Harris Heller",
+      "official_track_count": 31,
+      "duration": "72:47",
+      "year": 2021,
+      "moods": [
+        "chill"
+      ],
+      "image_url": "https://i.scdn.co/image/ab67616d0000b273a0f0e32313e9aded51aa6567",
+      "spotify": "https://open.spotify.com/album/11FtMDqlremBESg4tG9EAL",
+      "bandcamp": "https://streambeats.bandcamp.com/album/trouble",
+      "google_drive": "https://drive.google.com/drive/folders/196AfI6vYiSwKqb7ATKKg4J_4PcwG84jC",
+      "image": "streambeats/albums/trouble.jpg",
+      "similar_albums": [
+        "11FtMDqlremBESg4tG9EAL",
+        "better-when-i-m-high",
+        "better-when-i-m-high-remix",
+        "dansu",
+        "drop"
+      ],
+      "name_original": "Trouble",
+      "name_fr": "Inquiéter",
+      "genre_original": "EDM",
+      "genre_fr": "EDM",
+      "moods_original": [
+        "chill"
+      ],
+      "moods_fr": [
+        "Détendu"
+      ]
+    },
+    "sus": {
+      "slug": "sus",
+      "name": "Sus",
+      "url": "https://streambeats.com/album/sus",
+      "genre_slug": "edm",
+      "genre": "EDM",
+      "artist": "StreamBeats by Harris Heller",
+      "official_track_count": 20,
+      "duration": "41:54",
+      "year": 2021,
+      "moods": [
+        "chill"
+      ],
+      "image_url": "https://i.scdn.co/image/ab67616d0000b2736312b9e09ff908ff3e795a87",
+      "spotify": "https://open.spotify.com/album/6vMho6dchBsyWxMtVsZJPV",
+      "bandcamp": "https://streambeats.bandcamp.com/album/sus",
+      "google_drive": "https://drive.google.com/drive/folders/196AfI6vYiSwKqb7ATKKg4J_4PcwG84jC",
+      "image": "streambeats/albums/sus.jpg",
+      "similar_albums": [
+        "6vMho6dchBsyWxMtVsZJPV",
+        "better-when-i-m-high",
+        "better-when-i-m-high-remix",
+        "dansu",
+        "drop"
+      ],
+      "name_original": "Sus",
+      "name_fr": "Sus",
+      "genre_original": "EDM",
+      "genre_fr": "EDM",
+      "moods_original": [
+        "chill"
+      ],
+      "moods_fr": [
+        "Détendu"
+      ]
+    },
+    "stage": {
+      "slug": "stage",
+      "name": "Stage",
+      "url": "https://streambeats.com/album/stage",
+      "genre_slug": "edm",
+      "genre": "EDM",
+      "artist": "StreamBeats by Harris Heller",
+      "official_track_count": 30,
+      "duration": "75:25",
+      "year": 2020,
+      "moods": [
+        "chill"
+      ],
+      "image_url": "https://i.scdn.co/image/ab67616d0000b27367479af973102dfb529492bd",
+      "spotify": "https://open.spotify.com/album/6Rsc2i0rSiyo9sApmeqxuE",
+      "bandcamp": "https://streambeats.bandcamp.com/album/stage",
+      "google_drive": "https://drive.google.com/drive/folders/196AfI6vYiSwKqb7ATKKg4J_4PcwG84jC",
+      "image": "streambeats/albums/stage.jpg",
+      "similar_albums": [
+        "6Rsc2i0rSiyo9sApmeqxuE",
+        "better-when-i-m-high",
+        "better-when-i-m-high-remix",
+        "dansu",
+        "drop"
+      ],
+      "name_original": "Stage",
+      "name_fr": "Scène",
+      "genre_original": "EDM",
+      "genre_fr": "EDM",
+      "moods_original": [
+        "chill"
+      ],
+      "moods_fr": [
+        "Détendu"
+      ]
+    },
+    "dansu": {
+      "slug": "dansu",
+      "name": "DANSU",
+      "url": "https://streambeats.com/album/dansu",
+      "genre_slug": "edm",
+      "genre": "EDM",
+      "artist": "StreamBeats by Harris Heller",
+      "official_track_count": 25,
+      "duration": "63:02",
+      "year": 2020,
+      "moods": [
+        "chill"
+      ],
+      "image_url": "https://i.scdn.co/image/ab67616d0000b273c2beebd4a3f48084733c0a6a",
+      "spotify": "https://open.spotify.com/album/2wpKSHaKNEAnJLq7ur2DtR",
+      "bandcamp": "https://streambeats.bandcamp.com/album/dansu",
+      "google_drive": "https://drive.google.com/drive/folders/196AfI6vYiSwKqb7ATKKg4J_4PcwG84jC",
+      "image": "streambeats/albums/dansu.jpg",
+      "similar_albums": [
+        "2wpKSHaKNEAnJLq7ur2DtR",
+        "better-when-i-m-high",
+        "better-when-i-m-high-remix",
+        "drop",
+        "insomnia"
+      ],
+      "name_original": "DANSU",
+      "name_fr": "DANSU",
+      "genre_original": "EDM",
+      "genre_fr": "EDM",
+      "moods_original": [
+        "chill"
+      ],
+      "moods_fr": [
+        "Détendu"
+      ]
+    },
+    "royal": {
+      "slug": "royal",
+      "name": "Royal",
+      "url": "https://streambeats.com/album/royal",
+      "genre_slug": "edm",
+      "genre": "EDM",
+      "artist": "StreamBeats by Harris Heller",
+      "official_track_count": 31,
+      "duration": "73:06",
+      "year": 2020,
+      "moods": [
+        "chill"
+      ],
+      "image_url": "https://i.scdn.co/image/ab67616d0000b27366c433f959223b7bb64dfb53",
+      "spotify": "https://open.spotify.com/album/6s33TsZO4zBm4jcUMUeNVp",
+      "bandcamp": "https://streambeats.bandcamp.com/album/royal",
+      "google_drive": "https://drive.google.com/drive/folders/196AfI6vYiSwKqb7ATKKg4J_4PcwG84jC",
+      "image": "streambeats/albums/royal.jpg",
+      "similar_albums": [
+        "6s33TsZO4zBm4jcUMUeNVp",
+        "better-when-i-m-high",
+        "better-when-i-m-high-remix",
+        "dansu",
+        "drop"
+      ],
+      "name_original": "Royal",
+      "name_fr": "Royal",
+      "genre_original": "EDM",
+      "genre_fr": "EDM",
+      "moods_original": [
+        "chill"
+      ],
+      "moods_fr": [
+        "Détendu"
+      ]
+    },
+    "shingu": {
+      "slug": "shingu",
+      "name": "SHINGU",
+      "url": "https://streambeats.com/album/shingu",
+      "genre_slug": "edm",
+      "genre": "EDM",
+      "artist": "StreamBeats by Harris Heller",
+      "official_track_count": 26,
+      "duration": "67:32",
+      "year": 2020,
+      "moods": [
+        "chill"
+      ],
+      "image_url": "https://i.scdn.co/image/ab67616d0000b273bffd790c2f45499670c06052",
+      "spotify": "https://open.spotify.com/album/6kzbljHvPHHg7fBpZnN2M1",
+      "bandcamp": "https://streambeats.bandcamp.com/album/shingu",
+      "google_drive": "https://drive.google.com/drive/folders/196AfI6vYiSwKqb7ATKKg4J_4PcwG84jC",
+      "image": "streambeats/albums/shingu.jpg",
+      "similar_albums": [
+        "6kzbljHvPHHg7fBpZnN2M1",
+        "better-when-i-m-high",
+        "better-when-i-m-high-remix",
+        "dansu",
+        "drop"
+      ],
+      "name_original": "SHINGU",
+      "name_fr": "SHINGU",
+      "genre_original": "EDM",
+      "genre_fr": "EDM",
+      "moods_original": [
+        "chill"
+      ],
+      "moods_fr": [
+        "Détendu"
+      ]
+    },
+    "groove": {
+      "slug": "groove",
+      "name": "Groove",
+      "url": "https://streambeats.com/album/groove",
+      "genre_slug": "hifi",
+      "genre": "Hifi",
+      "artist": "StreamBeats by Harris Heller",
+      "official_track_count": 30,
+      "duration": "66:11",
+      "year": 2021,
+      "moods": [
+        "chill"
+      ],
+      "image_url": "https://i.scdn.co/image/ab67616d0000b273d1d1a2cce56ad594a08f4ccd",
+      "spotify": "https://open.spotify.com/album/7pY1Hfzd12nt9uMz8QNHuM",
+      "bandcamp": "https://streambeats.bandcamp.com/album/groove",
+      "google_drive": "https://drive.google.com/drive/folders/196AfI6vYiSwKqb7ATKKg4J_4PcwG84jC",
+      "image": "streambeats/albums/groove.jpg",
+      "similar_albums": [
+        "7pY1Hfzd12nt9uMz8QNHuM"
+      ],
+      "name_original": "Groove",
+      "name_fr": "Rainure",
+      "genre_original": "Hifi",
+      "genre_fr": "Hi-Fi",
+      "moods_original": [
+        "chill"
+      ],
+      "moods_fr": [
+        "Détendu"
+      ]
+    },
+    "bounce": {
+      "slug": "bounce",
+      "name": "Bounce",
+      "url": "https://streambeats.com/album/bounce",
+      "genre_slug": "hip-hop",
+      "genre": "Hip-Hop",
+      "artist": "StreamBeats by Harris Heller",
+      "official_track_count": 30,
+      "duration": "67:38",
+      "year": 2021,
+      "moods": [
+        "chill"
+      ],
+      "image_url": "https://i.scdn.co/image/ab67616d0000b2735d6fe807a02c4c59e1dc3f6d",
+      "spotify": "https://open.spotify.com/album/5VLXs8xgszG89zAZLxRp1p",
+      "bandcamp": "https://streambeats.bandcamp.com/album/bounce",
+      "google_drive": "https://drive.google.com/drive/folders/196AfI6vYiSwKqb7ATKKg4J_4PcwG84jC",
+      "image": "streambeats/albums/bounce.jpg",
+      "similar_albums": [
+        "5VLXs8xgszG89zAZLxRp1p",
+        "assassin",
+        "cracked",
+        "ghost",
+        "ignition"
+      ],
+      "name_original": "Bounce",
+      "name_fr": "Rebond",
+      "genre_original": "Hip-Hop",
+      "genre_fr": "Hip-Hop",
+      "moods_original": [
+        "chill"
+      ],
+      "moods_fr": [
+        "Détendu"
+      ]
+    },
+    "ignition": {
+      "slug": "ignition",
+      "name": "Ignition",
+      "url": "https://streambeats.com/album/ignition",
+      "genre_slug": "hip-hop",
+      "genre": "Hip-Hop",
+      "artist": "StreamBeats by Harris Heller",
+      "official_track_count": 30,
+      "duration": "66:31",
+      "year": 2021,
+      "moods": [
+        "chill"
+      ],
+      "image_url": "https://i.scdn.co/image/ab67616d0000b27351880f41bc6649f22f7e8b57",
+      "spotify": "https://open.spotify.com/album/4PhZWUjwOr2RNltCC1Lgjw",
+      "bandcamp": "https://streambeats.bandcamp.com/album/ignition",
+      "google_drive": "https://drive.google.com/drive/folders/196AfI6vYiSwKqb7ATKKg4J_4PcwG84jC",
+      "image": "streambeats/albums/ignition.jpg",
+      "similar_albums": [
+        "4PhZWUjwOr2RNltCC1Lgjw",
+        "assassin",
+        "bounce",
+        "cracked",
+        "ghost"
+      ],
+      "name_original": "Ignition",
+      "name_fr": "Allumage",
+      "genre_original": "Hip-Hop",
+      "genre_fr": "Hip-Hop",
+      "moods_original": [
+        "chill"
+      ],
+      "moods_fr": [
+        "Détendu"
+      ]
+    },
+    "supreme": {
+      "slug": "supreme",
+      "name": "Supreme",
+      "url": "https://streambeats.com/album/supreme",
+      "genre_slug": "hip-hop",
+      "genre": "Hip-Hop",
+      "artist": "StreamBeats by Harris Heller",
+      "official_track_count": 30,
+      "duration": "66:12",
+      "year": 2021,
+      "moods": [
+        "chill"
+      ],
+      "image_url": "https://i.scdn.co/image/ab67616d0000b273e2bac834427f2ea83f7e7a57",
+      "spotify": "https://open.spotify.com/album/1JUTkXhr6p6vfFTXKUuACC",
+      "bandcamp": "https://streambeats.bandcamp.com/album/supreme",
+      "google_drive": "https://drive.google.com/drive/folders/196AfI6vYiSwKqb7ATKKg4J_4PcwG84jC",
+      "image": "streambeats/albums/supreme.jpg",
+      "similar_albums": [
+        "1JUTkXhr6p6vfFTXKUuACC",
+        "assassin",
+        "bounce",
+        "cracked",
+        "ghost"
+      ],
+      "name_original": "Supreme",
+      "name_fr": "Suprême",
+      "genre_original": "Hip-Hop",
+      "genre_fr": "Hip-Hop",
+      "moods_original": [
+        "chill"
+      ],
+      "moods_fr": [
+        "Détendu"
+      ]
+    },
+    "cracked": {
+      "slug": "cracked",
+      "name": "Cracked",
+      "url": "https://streambeats.com/album/cracked",
+      "genre_slug": "hip-hop",
+      "genre": "Hip-Hop",
+      "artist": "StreamBeats by Harris Heller",
+      "official_track_count": 30,
+      "duration": "70:24",
+      "year": 2021,
+      "moods": [
+        "chill"
+      ],
+      "image_url": "https://i.scdn.co/image/ab67616d0000b2737847dd3a1ce0e7587a6a1a37",
+      "spotify": "https://open.spotify.com/album/1bxt9wGFmNOTsDUqpGIOo4",
+      "bandcamp": "https://streambeats.bandcamp.com/album/cracked",
+      "google_drive": "https://drive.google.com/drive/folders/196AfI6vYiSwKqb7ATKKg4J_4PcwG84jC",
+      "image": "streambeats/albums/cracked.jpg",
+      "similar_albums": [
+        "1bxt9wGFmNOTsDUqpGIOo4",
+        "assassin",
+        "bounce",
+        "ghost",
+        "ignition"
+      ],
+      "name_original": "Cracked",
+      "name_fr": "Fissuré",
+      "genre_original": "Hip-Hop",
+      "genre_fr": "Hip-Hop",
+      "moods_original": [
+        "chill"
+      ],
+      "moods_fr": [
+        "Détendu"
+      ]
+    },
+    "legend": {
+      "slug": "legend",
+      "name": "Legend",
+      "url": "https://streambeats.com/album/legend",
+      "genre_slug": "hip-hop",
+      "genre": "Hip-Hop",
+      "artist": "StreamBeats by Harris Heller",
+      "official_track_count": 30,
+      "duration": "66:51",
+      "year": 2021,
+      "moods": [
+        "chill"
+      ],
+      "image_url": "https://i.scdn.co/image/ab67616d0000b273b9a0a9fffb91703a4f7893d1",
+      "spotify": "https://open.spotify.com/album/2ZPmwZN0ZKfyLCRFXiKWkt",
+      "bandcamp": "https://streambeats.bandcamp.com/album/legend",
+      "google_drive": "https://drive.google.com/drive/folders/196AfI6vYiSwKqb7ATKKg4J_4PcwG84jC",
+      "image": "streambeats/albums/legend.jpg",
+      "similar_albums": [
+        "2ZPmwZN0ZKfyLCRFXiKWkt",
+        "assassin",
+        "bounce",
+        "cracked",
+        "ghost"
+      ],
+      "name_original": "Legend",
+      "name_fr": "Légende",
+      "genre_original": "Hip-Hop",
+      "genre_fr": "Hip-Hop",
+      "moods_original": [
+        "chill"
+      ],
+      "moods_fr": [
+        "Détendu"
+      ]
+    },
+    "recon": {
+      "slug": "recon",
+      "name": "Recon",
+      "url": "https://streambeats.com/album/recon",
+      "genre_slug": "hip-hop",
+      "genre": "Hip-Hop",
+      "artist": "StreamBeats by Harris Heller",
+      "official_track_count": 30,
+      "duration": "67:56",
+      "year": 2021,
+      "moods": [
+        "chill"
+      ],
+      "image_url": "https://i.scdn.co/image/ab67616d0000b2736ee9cfaef5bcc6f1123c962c",
+      "spotify": "https://open.spotify.com/album/1wC8gadLfEuoAuX9Zgxm7V",
+      "bandcamp": "https://streambeats.bandcamp.com/album/recon",
+      "google_drive": "https://drive.google.com/drive/folders/196AfI6vYiSwKqb7ATKKg4J_4PcwG84jC",
+      "image": "streambeats/albums/recon.jpg",
+      "similar_albums": [
+        "1wC8gadLfEuoAuX9Zgxm7V",
+        "assassin",
+        "bounce",
+        "cracked",
+        "ghost"
+      ],
+      "name_original": "Recon",
+      "name_fr": "Reconnaissance",
+      "genre_original": "Hip-Hop",
+      "genre_fr": "Hip-Hop",
+      "moods_original": [
+        "chill"
+      ],
+      "moods_fr": [
+        "Détendu"
+      ]
+    },
+    "upside": {
+      "slug": "upside",
+      "name": "Upside",
+      "url": "https://streambeats.com/album/upside",
+      "genre_slug": "hip-hop",
+      "genre": "Hip-Hop",
+      "artist": "StreamBeats by Harris Heller",
+      "official_track_count": 16,
+      "duration": "34:42",
+      "year": 2021,
+      "moods": [
+        "chill"
+      ],
+      "image_url": "https://i.scdn.co/image/ab67616d0000b273980a409975e068003c76fa38",
+      "spotify": "https://open.spotify.com/album/0t7YAK8ffFfdDiWa9UtIkt",
+      "bandcamp": "https://streambeats.bandcamp.com/album/upside",
+      "google_drive": "https://drive.google.com/drive/folders/196AfI6vYiSwKqb7ATKKg4J_4PcwG84jC",
+      "image": "streambeats/albums/upside.jpg",
+      "similar_albums": [
+        "0t7YAK8ffFfdDiWa9UtIkt",
+        "assassin",
+        "bounce",
+        "cracked",
+        "ghost"
+      ],
+      "name_original": "Upside",
+      "name_fr": "À l’envers",
+      "genre_original": "Hip-Hop",
+      "genre_fr": "Hip-Hop",
+      "moods_original": [
+        "chill"
+      ],
+      "moods_fr": [
+        "Détendu"
+      ]
+    },
+    "assassin": {
+      "slug": "assassin",
+      "name": "Assassin",
+      "url": "https://streambeats.com/album/assassin",
+      "genre_slug": "hip-hop",
+      "genre": "Hip-Hop",
+      "artist": "StreamBeats by Harris Heller",
+      "official_track_count": 34,
+      "duration": "76:54",
+      "year": 2021,
+      "moods": [
+        "chill"
+      ],
+      "image_url": "https://i.scdn.co/image/ab67616d0000b273d9df9a4da085304af2a60e12",
+      "spotify": "https://open.spotify.com/album/3PL3gY2p6Kpe1pVidkXM38",
+      "bandcamp": "https://streambeats.bandcamp.com/album/assassin",
+      "google_drive": "https://drive.google.com/drive/folders/196AfI6vYiSwKqb7ATKKg4J_4PcwG84jC",
+      "image": "streambeats/albums/assassin.jpg",
+      "similar_albums": [
+        "3PL3gY2p6Kpe1pVidkXM38",
+        "bounce",
+        "cracked",
+        "ghost",
+        "ignition"
+      ],
+      "name_original": "Assassin",
+      "name_fr": "Assassin",
+      "genre_original": "Hip-Hop",
+      "genre_fr": "Hip-Hop",
+      "moods_original": [
+        "chill"
+      ],
+      "moods_fr": [
+        "Détendu"
+      ]
+    },
+    "logic": {
+      "slug": "logic",
+      "name": "Logic",
+      "url": "https://streambeats.com/album/logic",
+      "genre_slug": "hip-hop",
+      "genre": "Hip-Hop",
+      "artist": "StreamBeats by Harris Heller",
+      "official_track_count": 35,
+      "duration": "79:53",
+      "year": 2021,
+      "moods": [
+        "chill"
+      ],
+      "image_url": "https://i.scdn.co/image/ab67616d0000b273dfa543e7b63e91131c52af69",
+      "spotify": "https://open.spotify.com/album/59lJqtQfp3WNqiY1PUrojm",
+      "bandcamp": "https://streambeats.bandcamp.com/album/logic",
+      "google_drive": "https://drive.google.com/drive/folders/196AfI6vYiSwKqb7ATKKg4J_4PcwG84jC",
+      "image": "streambeats/albums/logic.jpg",
+      "similar_albums": [
+        "59lJqtQfp3WNqiY1PUrojm",
+        "assassin",
+        "bounce",
+        "cracked",
+        "ghost"
+      ],
+      "name_original": "Logic",
+      "name_fr": "Logique",
+      "genre_original": "Hip-Hop",
+      "genre_fr": "Hip-Hop",
+      "moods_original": [
+        "chill"
+      ],
+      "moods_fr": [
+        "Détendu"
+      ]
+    },
+    "midnight": {
+      "slug": "midnight",
+      "name": "Midnight",
+      "url": "https://streambeats.com/album/midnight",
+      "genre_slug": "hip-hop",
+      "genre": "Hip-Hop",
+      "artist": "StreamBeats by Harris Heller",
+      "official_track_count": 30,
+      "duration": "63:27",
+      "year": 2021,
+      "moods": [
+        "chill"
+      ],
+      "image_url": "https://i.scdn.co/image/ab67616d0000b273ff145534c2db67280245bcc1",
+      "spotify": "https://open.spotify.com/album/4Quu4keJnrp0FD4wLqwNP8",
+      "bandcamp": "https://streambeats.bandcamp.com/album/midnight",
+      "google_drive": "https://drive.google.com/drive/folders/196AfI6vYiSwKqb7ATKKg4J_4PcwG84jC",
+      "image": "streambeats/albums/midnight.jpg",
+      "similar_albums": [
+        "4Quu4keJnrp0FD4wLqwNP8",
+        "assassin",
+        "bounce",
+        "cracked",
+        "ghost"
+      ],
+      "name_original": "Midnight",
+      "name_fr": "Minuit",
+      "genre_original": "Hip-Hop",
+      "genre_fr": "Hip-Hop",
+      "moods_original": [
+        "chill"
+      ],
+      "moods_fr": [
+        "Détendu"
+      ]
+    },
+    "ghost": {
+      "slug": "ghost",
+      "name": "Ghost",
+      "url": "https://streambeats.com/album/ghost",
+      "genre_slug": "hip-hop",
+      "genre": "Hip-Hop",
+      "artist": "StreamBeats by Harris Heller",
+      "official_track_count": 24,
+      "duration": "53:04",
+      "year": 2020,
+      "moods": [
+        "chill"
+      ],
+      "image_url": "https://i.scdn.co/image/ab67616d0000b2739e016229472c5831b8161ab8",
+      "spotify": "https://open.spotify.com/album/79OFciGgxSZE21EghiWC5i",
+      "bandcamp": "https://streambeats.bandcamp.com/album/ghost",
+      "google_drive": "https://drive.google.com/drive/folders/196AfI6vYiSwKqb7ATKKg4J_4PcwG84jC",
+      "image": "streambeats/albums/ghost.jpg",
+      "similar_albums": [
+        "79OFciGgxSZE21EghiWC5i",
+        "assassin",
+        "bounce",
+        "cracked",
+        "ignition"
+      ],
+      "name_original": "Ghost",
+      "name_fr": "Fantôme",
+      "genre_original": "Hip-Hop",
+      "genre_fr": "Hip-Hop",
+      "moods_original": [
+        "chill"
+      ],
+      "moods_fr": [
+        "Détendu"
+      ]
+    },
+    "lifestyle": {
+      "slug": "lifestyle",
+      "name": "Lifestyle",
+      "url": "https://streambeats.com/album/lifestyle",
+      "genre_slug": "hip-hop",
+      "genre": "Hip-Hop",
+      "artist": "StreamBeats by Harris Heller",
+      "official_track_count": 27,
+      "duration": "63:01",
+      "year": 2020,
+      "moods": [
+        "chill"
+      ],
+      "image_url": "https://i.scdn.co/image/ab67616d0000b273b58d4190598919da5e33333c",
+      "spotify": "https://open.spotify.com/album/0c7xuLPgc4ejBTGkOmweGO",
+      "bandcamp": "https://streambeats.bandcamp.com/album/lifestyle",
+      "google_drive": "https://drive.google.com/drive/folders/196AfI6vYiSwKqb7ATKKg4J_4PcwG84jC",
+      "image": "streambeats/albums/lifestyle.jpg",
+      "similar_albums": [
+        "0c7xuLPgc4ejBTGkOmweGO",
+        "assassin",
+        "bounce",
+        "cracked",
+        "ghost"
+      ],
+      "name_original": "Lifestyle",
+      "name_fr": "Mode de vie",
+      "genre_original": "Hip-Hop",
+      "genre_fr": "Hip-Hop",
+      "moods_original": [
+        "chill"
+      ],
+      "moods_fr": [
+        "Détendu"
+      ]
+    },
+    "101": {
+      "slug": "101",
+      "name": "101",
+      "url": "https://streambeats.com/album/101",
+      "genre_slug": "indy-pop",
+      "genre": "Indy Pop",
+      "artist": "Ryan King",
+      "official_track_count": 8,
+      "duration": "27:54",
+      "year": 2024,
+      "moods": [
+        "chill"
+      ],
+      "image_url": "https://i.scdn.co/image/ab67616d0000b273932d58512a49fb37c896f474",
+      "spotify": "https://open.spotify.com/album/4neqjvo2KYaJ7esDlT4HnU",
+      "bandcamp": "https://ryanking.bandcamp.com/album/101",
+      "google_drive": "https://drive.google.com/drive/folders/196AfI6vYiSwKqb7ATKKg4J_4PcwG84jC",
+      "image": "streambeats/albums/101.jpg",
+      "similar_albums": [
+        "4neqjvo2KYaJ7esDlT4HnU",
+        "all-my-faces-instrumental",
+        "i-need-a-break",
+        "out-of-here",
+        "run"
+      ],
+      "name_original": "101",
+      "name_fr": "101",
+      "genre_original": "Indy Pop",
+      "genre_fr": "Pop indé",
+      "moods_original": [
+        "chill"
+      ],
+      "moods_fr": [
+        "Détendu"
+      ]
+    },
+    "something-else": {
+      "slug": "something-else",
+      "name": "Something Else",
+      "url": "https://streambeats.com/album/something-else",
+      "genre_slug": "indy-pop",
+      "genre": "Indy Pop",
+      "artist": "Ryan King",
+      "official_track_count": 2,
+      "duration": "8:10",
+      "year": 2024,
+      "moods": [
+        "chill"
+      ],
+      "image_url": "https://i.scdn.co/image/ab67616d0000b27384926b0e5b4f2fd1017e8b96",
+      "spotify": "https://open.spotify.com/album/0SERjVbgW6H7kff6GbzVZR",
+      "bandcamp": "https://ryanking.bandcamp.com/album/something-else",
+      "google_drive": "https://drive.google.com/drive/folders/196AfI6vYiSwKqb7ATKKg4J_4PcwG84jC",
+      "image": "streambeats/albums/something-else.jpg",
+      "similar_albums": [
+        "0SERjVbgW6H7kff6GbzVZR",
+        "101",
+        "all-my-faces-instrumental",
+        "i-need-a-break",
+        "out-of-here"
+      ],
+      "name_original": "Something Else",
+      "name_fr": "Autre chose",
+      "genre_original": "Indy Pop",
+      "genre_fr": "Pop indé",
+      "moods_original": [
+        "chill"
+      ],
+      "moods_fr": [
+        "Détendu"
+      ]
+    },
+    "i-need-a-break": {
+      "slug": "i-need-a-break",
+      "name": "I Need A Break",
+      "url": "https://streambeats.com/album/i-need-a-break",
+      "genre_slug": "indy-pop",
+      "genre": "Indy Pop",
+      "artist": "Ryan King",
+      "official_track_count": 2,
+      "duration": "5:46",
+      "year": 2024,
+      "moods": [
+        "chill"
+      ],
+      "image_url": "https://i.scdn.co/image/ab67616d0000b2730bf58b32e48a480613a30fc7",
+      "spotify": "https://open.spotify.com/album/7qRsgxkedfOd3ah5QW8RG0",
+      "bandcamp": "https://ryanking.bandcamp.com/album/i-need-a-break",
+      "google_drive": "https://drive.google.com/drive/folders/196AfI6vYiSwKqb7ATKKg4J_4PcwG84jC",
+      "image": "streambeats/albums/i-need-a-break.jpg",
+      "similar_albums": [
+        "7qRsgxkedfOd3ah5QW8RG0",
+        "101",
+        "all-my-faces-instrumental",
+        "out-of-here",
+        "run"
+      ],
+      "name_original": "I Need A Break",
+      "name_fr": "J'ai besoin d'une pause",
+      "genre_original": "Indy Pop",
+      "genre_fr": "Pop indé",
+      "moods_original": [
+        "chill"
+      ],
+      "moods_fr": [
+        "Détendu"
+      ]
+    },
+    "out-of-here": {
+      "slug": "out-of-here",
+      "name": "Out Of Here",
+      "url": "https://streambeats.com/album/out-of-here",
+      "genre_slug": "indy-pop",
+      "genre": "Indy Pop",
+      "artist": "Ryan King",
+      "official_track_count": 2,
+      "duration": "5:17",
+      "year": 2023,
+      "moods": [
+        "chill"
+      ],
+      "image_url": "https://i.scdn.co/image/ab67616d0000b27384fd860e20441cee17e82ca1",
+      "spotify": "https://open.spotify.com/album/1O6ZFgzUNtZYEAkVaXN3YI",
+      "bandcamp": "https://ryanking.bandcamp.com/album/out-of-here",
+      "google_drive": "https://drive.google.com/drive/folders/196AfI6vYiSwKqb7ATKKg4J_4PcwG84jC",
+      "image": "streambeats/albums/out-of-here.jpg",
+      "similar_albums": [
+        "1O6ZFgzUNtZYEAkVaXN3YI",
+        "101",
+        "all-my-faces-instrumental",
+        "i-need-a-break",
+        "run"
+      ],
+      "name_original": "Out Of Here",
+      "name_fr": "Hors d'ici",
+      "genre_original": "Indy Pop",
+      "genre_fr": "Pop indé",
+      "moods_original": [
+        "chill"
+      ],
+      "moods_fr": [
+        "Détendu"
+      ]
+    },
+    "run": {
+      "slug": "run",
+      "name": "Run!",
+      "url": "https://streambeats.com/album/run",
+      "genre_slug": "indy-pop",
+      "genre": "Indy Pop",
+      "artist": "Ryan King",
+      "official_track_count": 2,
+      "duration": "5:54",
+      "year": 2022,
+      "moods": [
+        "chill"
+      ],
+      "image_url": "https://i.scdn.co/image/ab67616d0000b2732f8e7154630a29102ba225f5",
+      "spotify": "https://open.spotify.com/album/1K29ozjO95XIkQoDhaAi9t",
+      "bandcamp": "https://ryanking.bandcamp.com/album/run",
+      "google_drive": "https://drive.google.com/drive/folders/196AfI6vYiSwKqb7ATKKg4J_4PcwG84jC",
+      "image": "streambeats/albums/run.jpg",
+      "similar_albums": [
+        "1K29ozjO95XIkQoDhaAi9t",
+        "101",
+        "all-my-faces-instrumental",
+        "i-need-a-break",
+        "out-of-here"
+      ],
+      "name_original": "Run!",
+      "name_fr": "Courir!",
+      "genre_original": "Indy Pop",
+      "genre_fr": "Pop indé",
+      "moods_original": [
+        "chill"
+      ],
+      "moods_fr": [
+        "Détendu"
+      ]
+    },
+    "all-my-faces-instrumental": {
+      "slug": "all-my-faces-instrumental",
+      "name": "All My Faces (Instrumental)",
+      "url": "https://streambeats.com/album/all-my-faces-instrumental",
+      "genre_slug": "indy-pop",
+      "genre": "Indy Pop",
+      "artist": "Ryan King",
+      "official_track_count": 10,
+      "duration": "35:07",
+      "year": 2022,
+      "moods": [
+        "chill"
+      ],
+      "image_url": "https://i.scdn.co/image/ab67616d0000b273a72012fac3aa2ccc1cf3fae7",
+      "spotify": "https://open.spotify.com/album/5cxC8QlUa9RjInyCvtYxVX",
+      "bandcamp": "https://ryanking.bandcamp.com/album/all-my-faces-instrumental",
+      "google_drive": "https://drive.google.com/drive/folders/196AfI6vYiSwKqb7ATKKg4J_4PcwG84jC",
+      "image": "streambeats/albums/all-my-faces-instrumental.jpg",
+      "similar_albums": [
+        "5cxC8QlUa9RjInyCvtYxVX",
+        "101",
+        "i-need-a-break",
+        "out-of-here",
+        "run"
+      ],
+      "name_original": "All My Faces (Instrumental)",
+      "name_fr": "Tous mes visages (Instrumental)",
+      "genre_original": "Indy Pop",
+      "genre_fr": "Pop indé",
+      "moods_original": [
+        "chill"
+      ],
+      "moods_fr": [
+        "Détendu"
+      ]
+    },
+    "electric": {
+      "slug": "electric",
+      "name": "Electric",
+      "url": "https://streambeats.com/album/electric",
+      "genre_slug": "lofi",
+      "genre": "Lofi",
+      "artist": "StreamBeats by Harris Heller",
+      "official_track_count": 30,
+      "duration": "70:49",
+      "year": 2024,
+      "moods": [
+        "chill"
+      ],
+      "image_url": "https://i.scdn.co/image/ab67616d0000b2734f0d49ea78c5478b0314eade",
+      "spotify": "https://open.spotify.com/album/1Y18JN4kFvGOz4pSoEmAmw",
+      "bandcamp": "https://streambeats.bandcamp.com/album/electric",
+      "google_drive": "https://drive.google.com/drive/folders/196AfI6vYiSwKqb7ATKKg4J_4PcwG84jC",
+      "image": "streambeats/albums/electric.jpg",
+      "similar_albums": [
+        "1Y18JN4kFvGOz4pSoEmAmw",
+        "certain-shade-of-blue",
+        "cherry-soda",
+        "fantasy-arcade",
+        "gold"
+      ],
+      "name_original": "Electric",
+      "name_fr": "Électrique",
+      "genre_original": "Lofi",
+      "genre_fr": "Lofi",
+      "moods_original": [
+        "chill"
+      ],
+      "moods_fr": [
+        "Détendu"
+      ]
+    },
+    "prime": {
+      "slug": "prime",
+      "name": "Prime",
+      "url": "https://streambeats.com/album/prime",
+      "genre_slug": "lofi",
+      "genre": "Lofi",
+      "artist": "StreamBeats by Harris Heller",
+      "official_track_count": 29,
+      "duration": "63:36",
+      "year": 2024,
+      "moods": [
+        "chill"
+      ],
+      "image_url": "https://i.scdn.co/image/ab67616d0000b2734932cb4e5aff38eefec76c19",
+      "spotify": "https://open.spotify.com/album/6mj25GyMpUUUDSyVn56SHZ",
+      "bandcamp": "https://streambeats.bandcamp.com/album/prime",
+      "google_drive": "https://drive.google.com/drive/folders/196AfI6vYiSwKqb7ATKKg4J_4PcwG84jC",
+      "image": "streambeats/albums/prime.jpg",
+      "similar_albums": [
+        "6mj25GyMpUUUDSyVn56SHZ",
+        "certain-shade-of-blue",
+        "cherry-soda",
+        "electric",
+        "fantasy-arcade"
+      ],
+      "name_original": "Prime",
+      "name_fr": "Prime",
+      "genre_original": "Lofi",
+      "genre_fr": "Lofi",
+      "moods_original": [
+        "chill"
+      ],
+      "moods_fr": [
+        "Détendu"
+      ]
+    },
+    "slaps": {
+      "slug": "slaps",
+      "name": "Slaps",
+      "url": "https://streambeats.com/album/slaps",
+      "genre_slug": "lofi",
+      "genre": "Lofi",
+      "artist": "StreamBeats by Harris Heller",
+      "official_track_count": 30,
+      "duration": "66:28",
+      "year": 2024,
+      "moods": [
+        "chill"
+      ],
+      "image_url": "https://i.scdn.co/image/ab67616d0000b27320e9ea2648f4a89b42c25fe5",
+      "spotify": "https://open.spotify.com/album/7MF20BjXN2FIjPYzxklGOL",
+      "bandcamp": "https://streambeats.bandcamp.com/album/slaps",
+      "google_drive": "https://drive.google.com/drive/folders/196AfI6vYiSwKqb7ATKKg4J_4PcwG84jC",
+      "image": "streambeats/albums/slaps.jpg",
+      "similar_albums": [
+        "7MF20BjXN2FIjPYzxklGOL",
+        "certain-shade-of-blue",
+        "cherry-soda",
+        "electric",
+        "fantasy-arcade"
+      ],
+      "name_original": "Slaps",
+      "name_fr": "Gifles",
+      "genre_original": "Lofi",
+      "genre_fr": "Lofi",
+      "moods_original": [
+        "chill"
+      ],
+      "moods_fr": [
+        "Détendu"
+      ]
+    },
+    "neon": {
+      "slug": "neon",
+      "name": "Neon",
+      "url": "https://streambeats.com/album/neon",
+      "genre_slug": "lofi",
+      "genre": "Lofi",
+      "artist": "StreamBeats by Harris Heller",
+      "official_track_count": 30,
+      "duration": "73:13",
+      "year": 2023,
+      "moods": [
+        "chill"
+      ],
+      "image_url": "https://i.scdn.co/image/ab67616d0000b2733705326d09f43e7533963851",
+      "spotify": "https://open.spotify.com/album/4M8nNMmoVnHcGg8gMxxrbK",
+      "bandcamp": "https://streambeats.bandcamp.com/album/neon",
+      "google_drive": "https://drive.google.com/drive/folders/196AfI6vYiSwKqb7ATKKg4J_4PcwG84jC",
+      "image": "streambeats/albums/neon.jpg",
+      "similar_albums": [
+        "4M8nNMmoVnHcGg8gMxxrbK",
+        "certain-shade-of-blue",
+        "cherry-soda",
+        "electric",
+        "fantasy-arcade"
+      ],
+      "name_original": "Neon",
+      "name_fr": "Néon",
+      "genre_original": "Lofi",
+      "genre_fr": "Lofi",
+      "moods_original": [
+        "chill"
+      ],
+      "moods_fr": [
+        "Détendu"
+      ]
+    },
+    "quest": {
+      "slug": "quest",
+      "name": "Quest",
+      "url": "https://streambeats.com/album/quest",
+      "genre_slug": "lofi",
+      "genre": "Lofi",
+      "artist": "StreamBeats by Harris Heller",
+      "official_track_count": 30,
+      "duration": "68:59",
+      "year": 2023,
+      "moods": [
+        "chill"
+      ],
+      "image_url": "https://i.scdn.co/image/ab67616d0000b2731859f427f09ab05f53cf866d",
+      "spotify": "https://open.spotify.com/album/32DeQ4ylDCllVypdLNJY9o",
+      "bandcamp": "https://streambeats.bandcamp.com/album/quest",
+      "google_drive": "https://drive.google.com/drive/folders/196AfI6vYiSwKqb7ATKKg4J_4PcwG84jC",
+      "image": "streambeats/albums/quest.jpg",
+      "similar_albums": [
+        "32DeQ4ylDCllVypdLNJY9o",
+        "certain-shade-of-blue",
+        "cherry-soda",
+        "electric",
+        "fantasy-arcade"
+      ],
+      "name_original": "Quest",
+      "name_fr": "Quête",
+      "genre_original": "Lofi",
+      "genre_fr": "Lofi",
+      "moods_original": [
+        "chill"
+      ],
+      "moods_fr": [
+        "Détendu"
+      ]
+    },
+    "reflection": {
+      "slug": "reflection",
+      "name": "Reflection",
+      "url": "https://streambeats.com/album/reflection",
+      "genre_slug": "lofi",
+      "genre": "Lofi",
+      "artist": "StreamBeats by Harris Heller",
+      "official_track_count": 30,
+      "duration": "70:27",
+      "year": 2023,
+      "moods": [
+        "chill"
+      ],
+      "image_url": "https://i.scdn.co/image/ab67616d0000b2731f71e1372a1beae7c53b8fbd",
+      "spotify": "https://open.spotify.com/album/5z0F5XKd273hMhfau6lZdx",
+      "bandcamp": "https://streambeats.bandcamp.com/album/reflection",
+      "google_drive": "https://drive.google.com/drive/folders/196AfI6vYiSwKqb7ATKKg4J_4PcwG84jC",
+      "image": "streambeats/albums/reflection.jpg",
+      "similar_albums": [
+        "5z0F5XKd273hMhfau6lZdx",
+        "certain-shade-of-blue",
+        "cherry-soda",
+        "electric",
+        "fantasy-arcade"
+      ],
+      "name_original": "Reflection",
+      "name_fr": "Réflexion",
+      "genre_original": "Lofi",
+      "genre_fr": "Lofi",
+      "moods_original": [
+        "chill"
+      ],
+      "moods_fr": [
+        "Détendu"
+      ]
+    },
+    "secluded": {
+      "slug": "secluded",
+      "name": "Secluded",
+      "url": "https://streambeats.com/album/secluded",
+      "genre_slug": "lofi",
+      "genre": "Lofi",
+      "artist": "StreamBeats by Harris Heller",
+      "official_track_count": 30,
+      "duration": "67:49",
+      "year": 2023,
+      "moods": [
+        "chill"
+      ],
+      "image_url": "https://i.scdn.co/image/ab67616d0000b273cd2bca8f899d10af75f8f9b2",
+      "spotify": "https://open.spotify.com/album/65EycAIRu466trIY0fQrJ6",
+      "bandcamp": "https://streambeats.bandcamp.com/album/secluded",
+      "google_drive": "https://drive.google.com/drive/folders/196AfI6vYiSwKqb7ATKKg4J_4PcwG84jC",
+      "image": "streambeats/albums/secluded.jpg",
+      "similar_albums": [
+        "65EycAIRu466trIY0fQrJ6",
+        "certain-shade-of-blue",
+        "cherry-soda",
+        "electric",
+        "fantasy-arcade"
+      ],
+      "name_original": "Secluded",
+      "name_fr": "Isolé",
+      "genre_original": "Lofi",
+      "genre_fr": "Lofi",
+      "moods_original": [
+        "chill"
+      ],
+      "moods_fr": [
+        "Détendu"
+      ]
+    },
+    "cherry-soda": {
+      "slug": "cherry-soda",
+      "name": "Cherry Soda",
+      "url": "https://streambeats.com/album/cherry-soda",
+      "genre_slug": "lofi",
+      "genre": "Lofi",
+      "artist": "StreamBeats by Harris Heller",
+      "official_track_count": 30,
+      "duration": "69:25",
+      "year": 2022,
+      "moods": [
+        "chill"
+      ],
+      "image_url": "https://i.scdn.co/image/ab67616d0000b2739ea4cd6238cf02d05946027e",
+      "spotify": "https://open.spotify.com/album/24UuPyNG9e2vySQ1yyB5kJ",
+      "bandcamp": "https://streambeats.bandcamp.com/album/cherry-soda",
+      "google_drive": "https://drive.google.com/drive/folders/196AfI6vYiSwKqb7ATKKg4J_4PcwG84jC",
+      "image": "streambeats/albums/cherry-soda.jpg",
+      "similar_albums": [
+        "24UuPyNG9e2vySQ1yyB5kJ",
+        "certain-shade-of-blue",
+        "electric",
+        "fantasy-arcade",
+        "gold"
+      ],
+      "name_original": "Cherry Soda",
+      "name_fr": "Soda aux cerises",
+      "genre_original": "Lofi",
+      "genre_fr": "Lofi",
+      "moods_original": [
+        "chill"
+      ],
+      "moods_fr": [
+        "Détendu"
+      ]
+    },
+    "rain": {
+      "slug": "rain",
+      "name": "Rain",
+      "url": "https://streambeats.com/album/rain",
+      "genre_slug": "lofi",
+      "genre": "Lofi",
+      "artist": "StreamBeats by Harris Heller",
+      "official_track_count": 14,
+      "duration": "34:32",
+      "year": 2021,
+      "moods": [
+        "chill"
+      ],
+      "image_url": "https://i.scdn.co/image/ab67616d0000b273e6f7ac650622f19386ac045a",
+      "spotify": "https://open.spotify.com/album/6M83TBGSJmtJqDLrNXxoYD",
+      "bandcamp": "https://streambeats.bandcamp.com/album/rain",
+      "google_drive": "https://drive.google.com/drive/folders/196AfI6vYiSwKqb7ATKKg4J_4PcwG84jC",
+      "image": "streambeats/albums/rain.jpg",
+      "similar_albums": [
+        "6M83TBGSJmtJqDLrNXxoYD",
+        "certain-shade-of-blue",
+        "cherry-soda",
+        "electric",
+        "fantasy-arcade"
+      ],
+      "name_original": "Rain",
+      "name_fr": "Pluie",
+      "genre_original": "Lofi",
+      "genre_fr": "Lofi",
+      "moods_original": [
+        "chill"
+      ],
+      "moods_fr": [
+        "Détendu"
+      ]
+    },
+    "inu": {
+      "slug": "inu",
+      "name": "Inu",
+      "url": "https://streambeats.com/album/inu",
+      "genre_slug": "lofi",
+      "genre": "Lofi",
+      "artist": "StreamBeats by Harris Heller",
+      "official_track_count": 30,
+      "duration": "69:43",
+      "year": 2020,
+      "moods": [
+        "chill"
+      ],
+      "image_url": "https://i.scdn.co/image/ab67616d0000b27368bb5b1ba5ce7384a949c570",
+      "spotify": "https://open.spotify.com/album/6vwFhMxX2dI5yuurW9yzfz",
+      "bandcamp": "https://streambeats.bandcamp.com/album/inu",
+      "google_drive": "https://drive.google.com/drive/folders/196AfI6vYiSwKqb7ATKKg4J_4PcwG84jC",
+      "image": "streambeats/albums/inu.jpg",
+      "similar_albums": [
+        "6vwFhMxX2dI5yuurW9yzfz",
+        "certain-shade-of-blue",
+        "cherry-soda",
+        "electric",
+        "fantasy-arcade"
+      ],
+      "name_original": "Inu",
+      "name_fr": "Inu",
+      "genre_original": "Lofi",
+      "genre_fr": "Lofi",
+      "moods_original": [
+        "chill"
+      ],
+      "moods_fr": [
+        "Détendu"
+      ]
+    },
+    "neko": {
+      "slug": "neko",
+      "name": "Neko",
+      "url": "https://streambeats.com/album/neko",
+      "genre_slug": "lofi",
+      "genre": "Lofi",
+      "artist": "StreamBeats by Harris Heller",
+      "official_track_count": 30,
+      "duration": "71:00",
+      "year": 2020,
+      "moods": [
+        "chill"
+      ],
+      "image_url": "https://i.scdn.co/image/ab67616d0000b273032b80c0d61daed9a8bd370a",
+      "spotify": "https://open.spotify.com/album/4w4JPgUWRFesqdhdhd52Oo",
+      "bandcamp": "https://streambeats.bandcamp.com/album/neko",
+      "google_drive": "https://drive.google.com/drive/folders/196AfI6vYiSwKqb7ATKKg4J_4PcwG84jC",
+      "image": "streambeats/albums/neko.jpg",
+      "similar_albums": [
+        "4w4JPgUWRFesqdhdhd52Oo",
+        "certain-shade-of-blue",
+        "cherry-soda",
+        "electric",
+        "fantasy-arcade"
+      ],
+      "name_original": "Neko",
+      "name_fr": "Néko",
+      "genre_original": "Lofi",
+      "genre_fr": "Lofi",
+      "moods_original": [
+        "chill"
+      ],
+      "moods_fr": [
+        "Détendu"
+      ]
+    },
+    "white": {
+      "slug": "white",
+      "name": "White",
+      "url": "https://streambeats.com/album/white",
+      "genre_slug": "lofi",
+      "genre": "Lofi",
+      "artist": "StreamBeats by Harris Heller",
+      "official_track_count": 31,
+      "duration": "77:01",
+      "year": 2020,
+      "moods": [
+        "chill"
+      ],
+      "image_url": "https://i.scdn.co/image/ab67616d0000b273c6cd9f83943d157edfb32daa",
+      "spotify": "https://open.spotify.com/album/0RzHRmYBfRJ7dOiZVmmZeT",
+      "bandcamp": "https://streambeats.bandcamp.com/album/white",
+      "google_drive": "https://drive.google.com/drive/folders/196AfI6vYiSwKqb7ATKKg4J_4PcwG84jC",
+      "image": "streambeats/albums/white.jpg",
+      "similar_albums": [
+        "0RzHRmYBfRJ7dOiZVmmZeT",
+        "certain-shade-of-blue",
+        "cherry-soda",
+        "electric",
+        "fantasy-arcade"
+      ],
+      "name_original": "White",
+      "name_fr": "Blanc",
+      "genre_original": "Lofi",
+      "genre_fr": "Lofi",
+      "moods_original": [
+        "chill"
+      ],
+      "moods_fr": [
+        "Détendu"
+      ]
+    },
+    "gold": {
+      "slug": "gold",
+      "name": "Gold",
+      "url": "https://streambeats.com/album/gold",
+      "genre_slug": "lofi",
+      "genre": "Lofi",
+      "artist": "StreamBeats by Harris Heller",
+      "official_track_count": 31,
+      "duration": "81:39",
+      "year": 2020,
+      "moods": [
+        "chill"
+      ],
+      "image_url": "https://i.scdn.co/image/ab67616d0000b27312b79a23458946d517824426",
+      "spotify": "https://open.spotify.com/album/333pQHYM7CiI3I1Ypi9BUL",
+      "bandcamp": "https://streambeats.bandcamp.com/album/gold",
+      "google_drive": "https://drive.google.com/drive/folders/196AfI6vYiSwKqb7ATKKg4J_4PcwG84jC",
+      "image": "streambeats/albums/gold.jpg",
+      "similar_albums": [
+        "333pQHYM7CiI3I1Ypi9BUL",
+        "certain-shade-of-blue",
+        "cherry-soda",
+        "electric",
+        "fantasy-arcade"
+      ],
+      "name_original": "Gold",
+      "name_fr": "Or",
+      "genre_original": "Lofi",
+      "genre_fr": "Lofi",
+      "moods_original": [
+        "chill"
+      ],
+      "moods_fr": [
+        "Détendu"
+      ]
+    },
+    "certain-shade-of-blue": {
+      "slug": "certain-shade-of-blue",
+      "name": "Certain Shade of Blue",
+      "url": "https://streambeats.com/album/certain-shade-of-blue",
+      "genre_slug": "lofi",
+      "genre": "Lofi",
+      "artist": "StreamBeats by Harris Heller",
+      "official_track_count": 30,
+      "duration": "60:18",
+      "year": 2020,
+      "moods": [
+        "chill"
+      ],
+      "image_url": "https://i.scdn.co/image/ab67616d0000b273bcb9bf61e86c903cc5d7d1ae",
+      "spotify": "https://open.spotify.com/album/26OxuMt7jC79z5frirmvNN",
+      "bandcamp": "https://streambeats.bandcamp.com/album/certain-shade-of-blue",
+      "google_drive": "https://drive.google.com/drive/folders/196AfI6vYiSwKqb7ATKKg4J_4PcwG84jC",
+      "image": "streambeats/albums/certain-shade-of-blue.jpg",
+      "similar_albums": [
+        "26OxuMt7jC79z5frirmvNN",
+        "cherry-soda",
+        "electric",
+        "fantasy-arcade",
+        "gold"
+      ],
+      "name_original": "Certain Shade of Blue",
+      "name_fr": "Certaines nuances de bleu",
+      "genre_original": "Lofi",
+      "genre_fr": "Lofi",
+      "moods_original": [
+        "chill"
+      ],
+      "moods_fr": [
+        "Détendu"
+      ]
+    },
+    "ocularium": {
+      "slug": "ocularium",
+      "name": "Ocularium",
+      "url": "https://streambeats.com/album/ocularium",
+      "genre_slug": "lofi",
+      "genre": "Lofi",
+      "artist": "StreamBeats by Harris Heller",
+      "official_track_count": 30,
+      "duration": "59:10",
+      "year": 2020,
+      "moods": [
+        "chill"
+      ],
+      "image_url": "https://i.scdn.co/image/ab67616d0000b2738da6d2bb1c827277eeba9954",
+      "spotify": "https://open.spotify.com/album/0lkMXqXLD0kCIWT6gi0Pro",
+      "bandcamp": "https://streambeats.bandcamp.com/album/ocularium",
+      "google_drive": "https://drive.google.com/drive/folders/196AfI6vYiSwKqb7ATKKg4J_4PcwG84jC",
+      "image": "streambeats/albums/ocularium.jpg",
+      "similar_albums": [
+        "0lkMXqXLD0kCIWT6gi0Pro",
+        "certain-shade-of-blue",
+        "cherry-soda",
+        "electric",
+        "fantasy-arcade"
+      ],
+      "name_original": "Ocularium",
+      "name_fr": "Oculaire",
+      "genre_original": "Lofi",
+      "genre_fr": "Lofi",
+      "moods_original": [
+        "chill"
+      ],
+      "moods_fr": [
+        "Détendu"
+      ]
+    },
+    "in-4k": {
+      "slug": "in-4k",
+      "name": "In 4k",
+      "url": "https://streambeats.com/album/in-4k",
+      "genre_slug": "lofi",
+      "genre": "Lofi",
+      "artist": "StreamBeats by Harris Heller",
+      "official_track_count": 30,
+      "duration": "74:14",
+      "year": 2020,
+      "moods": [
+        "chill"
+      ],
+      "image_url": "https://i.scdn.co/image/ab67616d0000b2739a1335817c53ce43f6bad9ec",
+      "spotify": "https://open.spotify.com/album/1J9aJUuk6CE6uTfqLLfMHZ",
+      "bandcamp": "https://streambeats.bandcamp.com/album/in-4k",
+      "google_drive": "https://drive.google.com/drive/folders/196AfI6vYiSwKqb7ATKKg4J_4PcwG84jC",
+      "image": "streambeats/albums/in-4k.jpg",
+      "similar_albums": [
+        "1J9aJUuk6CE6uTfqLLfMHZ",
+        "certain-shade-of-blue",
+        "cherry-soda",
+        "electric",
+        "fantasy-arcade"
+      ],
+      "name_original": "In 4k",
+      "name_fr": "En 4k",
+      "genre_original": "Lofi",
+      "genre_fr": "Lofi",
+      "moods_original": [
+        "chill"
+      ],
+      "moods_fr": [
+        "Détendu"
+      ]
+    },
+    "sakura-dreams": {
+      "slug": "sakura-dreams",
+      "name": "Sakura Dreams",
+      "url": "https://streambeats.com/album/sakura-dreams",
+      "genre_slug": "lofi",
+      "genre": "Lofi",
+      "artist": "StreamBeats by Harris Heller",
+      "official_track_count": 30,
+      "duration": "61:10",
+      "year": 2020,
+      "moods": [
+        "chill"
+      ],
+      "image_url": "https://i.scdn.co/image/ab67616d0000b273bead918de4a92f5aa620feae",
+      "spotify": "https://open.spotify.com/album/3FJVAGLv05TyKnxJ3lSyCg",
+      "bandcamp": "https://streambeats.bandcamp.com/album/sakura-dreams",
+      "google_drive": "https://drive.google.com/drive/folders/196AfI6vYiSwKqb7ATKKg4J_4PcwG84jC",
+      "image": "streambeats/albums/sakura-dreams.jpg",
+      "similar_albums": [
+        "3FJVAGLv05TyKnxJ3lSyCg",
+        "certain-shade-of-blue",
+        "cherry-soda",
+        "electric",
+        "fantasy-arcade"
+      ],
+      "name_original": "Sakura Dreams",
+      "name_fr": "Rêves de Sakura",
+      "genre_original": "Lofi",
+      "genre_fr": "Lofi",
+      "moods_original": [
+        "chill"
+      ],
+      "moods_fr": [
+        "Détendu"
+      ]
+    },
+    "fantasy-arcade": {
+      "slug": "fantasy-arcade",
+      "name": "Fantasy Arcade",
+      "url": "https://streambeats.com/album/fantasy-arcade",
+      "genre_slug": "lofi",
+      "genre": "Lofi",
+      "artist": "StreamBeats by Harris Heller",
+      "official_track_count": 30,
+      "duration": "57:36",
+      "year": 2020,
+      "moods": [
+        "chill"
+      ],
+      "image_url": "https://i.scdn.co/image/ab67616d0000b27350280fe94d2e62e39c11cb85",
+      "spotify": "https://open.spotify.com/album/6tlLuETfcxkjDQzfqdVG10",
+      "bandcamp": "https://streambeats.bandcamp.com/album/fantasy-arcade",
+      "google_drive": "https://drive.google.com/drive/folders/196AfI6vYiSwKqb7ATKKg4J_4PcwG84jC",
+      "image": "streambeats/albums/fantasy-arcade.jpg",
+      "similar_albums": [
+        "6tlLuETfcxkjDQzfqdVG10",
+        "certain-shade-of-blue",
+        "cherry-soda",
+        "electric",
+        "gold"
+      ],
+      "name_original": "Fantasy Arcade",
+      "name_fr": "Arcade fantastique",
+      "genre_original": "Lofi",
+      "genre_fr": "Lofi",
+      "moods_original": [
+        "chill"
+      ],
+      "moods_fr": [
+        "Détendu"
+      ]
+    },
+    "high-at-the-planetarium": {
+      "slug": "high-at-the-planetarium",
+      "name": "High at the Planetarium",
+      "url": "https://streambeats.com/album/high-at-the-planetarium",
+      "genre_slug": "lofi",
+      "genre": "Lofi",
+      "artist": "StreamBeats by Harris Heller",
+      "official_track_count": 30,
+      "duration": "61:30",
+      "year": 2020,
+      "moods": [
+        "intense"
+      ],
+      "image_url": "https://i.scdn.co/image/ab67616d0000b27359f036f4ff00fd238f5868d8",
+      "spotify": "https://open.spotify.com/album/3JgHSYjnCp2r46fNqqvzbm",
+      "bandcamp": "https://streambeats.bandcamp.com/album/high-at-the-planetarium",
+      "google_drive": "https://drive.google.com/drive/folders/196AfI6vYiSwKqb7ATKKg4J_4PcwG84jC",
+      "image": "streambeats/albums/high-at-the-planetarium.jpg",
+      "similar_albums": [
+        "3JgHSYjnCp2r46fNqqvzbm",
+        "certain-shade-of-blue",
+        "cherry-soda",
+        "electric",
+        "fantasy-arcade"
+      ],
+      "name_original": "High at the Planetarium",
+      "name_fr": "En hauteur au Planétarium",
+      "genre_original": "Lofi",
+      "genre_fr": "Lofi",
+      "moods_original": [
+        "intense"
+      ],
+      "moods_fr": [
+        "Intense"
+      ]
+    },
+    "demon": {
+      "slug": "demon",
+      "name": "Demon",
+      "url": "https://streambeats.com/album/demon",
+      "genre_slug": "rock",
+      "genre": "Rock",
+      "artist": "StreamBeats Originals",
+      "official_track_count": 11,
+      "duration": "33:28",
+      "year": 2021,
+      "moods": [
+        "dark"
+      ],
+      "image_url": "https://i.scdn.co/image/ab67616d0000b2738649ca201601ec380d687ae6",
+      "spotify": "https://open.spotify.com/album/7GcifYmFvq50fFmPYIVjqd",
+      "bandcamp": "https://streambeats.bandcamp.com/album/demon",
+      "google_drive": "https://drive.google.com/drive/folders/196AfI6vYiSwKqb7ATKKg4J_4PcwG84jC",
+      "image": "streambeats/albums/demon.jpg",
+      "similar_albums": [
+        "7GcifYmFvq50fFmPYIVjqd",
+        "demon-instrumental",
+        "kill-it-anyway"
+      ],
+      "name_original": "Demon",
+      "name_fr": "Démon",
+      "genre_original": "Rock",
+      "genre_fr": "Rock",
+      "moods_original": [
+        "dark"
+      ],
+      "moods_fr": [
+        "Sombre"
+      ]
+    },
+    "demon-instrumental": {
+      "slug": "demon-instrumental",
+      "name": "Demon (Instrumental)",
+      "url": "https://streambeats.com/album/demon-instrumental",
+      "genre_slug": "rock",
+      "genre": "Rock",
+      "artist": "StreamBeats Originals",
+      "official_track_count": 10,
+      "duration": "31:18",
+      "year": 2021,
+      "moods": [
+        "dark"
+      ],
+      "image_url": "https://i.scdn.co/image/ab67616d0000b2733babcb433a4714baf701979a",
+      "spotify": "https://open.spotify.com/album/0rZzPjHZ5aRAm1pKKSPq2l",
+      "bandcamp": "https://streambeats.bandcamp.com/album/demon-instrumental",
+      "google_drive": "https://drive.google.com/drive/folders/196AfI6vYiSwKqb7ATKKg4J_4PcwG84jC",
+      "image": "streambeats/albums/demon-instrumental.jpg",
+      "similar_albums": [
+        "0rZzPjHZ5aRAm1pKKSPq2l",
+        "demon",
+        "kill-it-anyway"
+      ],
+      "name_original": "Demon (Instrumental)",
+      "name_fr": "Démon (Instrumental)",
+      "genre_original": "Rock",
+      "genre_fr": "Rock",
+      "moods_original": [
+        "dark"
+      ],
+      "moods_fr": [
+        "Sombre"
+      ]
+    },
+    "kill-it-anyway": {
+      "slug": "kill-it-anyway",
+      "name": "Kill It Anyway",
+      "url": "https://streambeats.com/album/kill-it-anyway",
+      "genre_slug": "rock",
+      "genre": "Rock",
+      "artist": "StreamBeats Originals",
+      "official_track_count": 2,
+      "duration": "5:36",
+      "year": 2021,
+      "moods": [
+        "chill"
+      ],
+      "image_url": "https://i.scdn.co/image/ab67616d0000b2736b5c30d7ce9ee961ad31d63d",
+      "spotify": "https://open.spotify.com/album/2r0T5KiTM8mw94NLNxa1ob",
+      "bandcamp": "https://streambeats.bandcamp.com/album/kill-it-anyway",
+      "google_drive": "https://drive.google.com/drive/folders/196AfI6vYiSwKqb7ATKKg4J_4PcwG84jC",
+      "image": "streambeats/albums/kill-it-anyway.jpg",
+      "similar_albums": [
+        "2r0T5KiTM8mw94NLNxa1ob",
+        "demon",
+        "demon-instrumental"
+      ],
+      "name_original": "Kill It Anyway",
+      "name_fr": "Tue-le quand même",
+      "genre_original": "Rock",
+      "genre_fr": "Rock",
+      "moods_original": [
+        "chill"
+      ],
+      "moods_fr": [
+        "Détendu"
+      ]
+    },
+    "groovy": {
+      "slug": "groovy",
+      "name": "Groovy",
+      "url": "https://streambeats.com/album/groovy",
+      "genre_slug": "synthwave",
+      "genre": "Synthwave",
+      "artist": "StreamBeats by Harris Heller",
+      "official_track_count": 30,
+      "duration": "58:52",
+      "year": 2024,
+      "moods": [
+        "dreamy"
+      ],
+      "image_url": "https://i.scdn.co/image/ab67616d0000b273dc50427a67fb8a8e7d4613a5",
+      "spotify": "https://open.spotify.com/album/5jOx0Xt1Nm3g7FeoYFCyo6",
+      "bandcamp": "https://streambeats.bandcamp.com/album/groovy",
+      "google_drive": "https://drive.google.com/drive/folders/196AfI6vYiSwKqb7ATKKg4J_4PcwG84jC",
+      "image": "streambeats/albums/groovy.jpg",
+      "similar_albums": [
+        "5jOx0Xt1Nm3g7FeoYFCyo6",
+        "breaker",
+        "ego",
+        "lone-wolf",
+        "midnight-1"
+      ],
+      "name_original": "Groovy",
+      "name_fr": "Groovy",
+      "genre_original": "Synthwave",
+      "genre_fr": "Synthwave",
+      "moods_original": [
+        "dreamy"
+      ],
+      "moods_fr": [
+        "Rêveur"
+      ]
+    },
+    "midnight-1": {
+      "slug": "midnight-1",
+      "name": "Midnight",
+      "url": "https://streambeats.com/album/midnight-1",
+      "genre_slug": "synthwave",
+      "genre": "Synthwave",
+      "artist": "StreamBeats by Harris Heller",
+      "official_track_count": 30,
+      "duration": "60:52",
+      "year": 2024,
+      "moods": [
+        "chill"
+      ],
+      "image_url": "https://i.scdn.co/image/ab67616d0000b27370aaa80808899c62a10678c1",
+      "spotify": "https://open.spotify.com/album/0geAFAMciEy4WEghgInKo4",
+      "bandcamp": "https://streambeats.bandcamp.com/album/midnight-1",
+      "google_drive": "https://drive.google.com/drive/folders/196AfI6vYiSwKqb7ATKKg4J_4PcwG84jC",
+      "image": "streambeats/albums/midnight-1.jpg",
+      "similar_albums": [
+        "0geAFAMciEy4WEghgInKo4",
+        "breaker",
+        "ego",
+        "groovy",
+        "lone-wolf"
+      ],
+      "name_original": "Midnight",
+      "name_fr": "Minuit",
+      "genre_original": "Synthwave",
+      "genre_fr": "Synthwave",
+      "moods_original": [
+        "chill"
+      ],
+      "moods_fr": [
+        "Détendu"
+      ]
+    },
+    "rose": {
+      "slug": "rose",
+      "name": "Rose",
+      "url": "https://streambeats.com/album/rose",
+      "genre_slug": "synthwave",
+      "genre": "Synthwave",
+      "artist": "StreamBeats by Harris Heller",
+      "official_track_count": 20,
+      "duration": "44:14",
+      "year": 2021,
+      "moods": [
+        "energetic"
+      ],
+      "image_url": "https://i.scdn.co/image/ab67616d0000b273be642bcc7785aa4c43ee6411",
+      "spotify": "https://open.spotify.com/album/67SAM8BqHqehvpfQUQYfWR",
+      "bandcamp": "https://streambeats.bandcamp.com/album/rose",
+      "google_drive": "https://drive.google.com/drive/folders/196AfI6vYiSwKqb7ATKKg4J_4PcwG84jC",
+      "image": "streambeats/albums/rose.jpg",
+      "similar_albums": [
+        "67SAM8BqHqehvpfQUQYfWR",
+        "breaker",
+        "ego",
+        "groovy",
+        "lone-wolf"
+      ],
+      "name_original": "Rose",
+      "name_fr": "Rose",
+      "genre_original": "Synthwave",
+      "genre_fr": "Synthwave",
+      "moods_original": [
+        "energetic"
+      ],
+      "moods_fr": [
+        "Énergique"
+      ]
+    },
+    "breaker": {
+      "slug": "breaker",
+      "name": "Breaker",
+      "url": "https://streambeats.com/album/breaker",
+      "genre_slug": "synthwave",
+      "genre": "Synthwave",
+      "artist": "StreamBeats by Harris Heller",
+      "official_track_count": 31,
+      "duration": "99:32",
+      "year": 2021,
+      "moods": [
+        "dark"
+      ],
+      "image_url": "https://i.scdn.co/image/ab67616d0000b273f114b25ae023e4e775ed11cf",
+      "spotify": "https://open.spotify.com/album/03XjdYOXYg73IW8PO3jUx2",
+      "bandcamp": "https://streambeats.bandcamp.com/album/breaker",
+      "google_drive": "https://drive.google.com/drive/folders/196AfI6vYiSwKqb7ATKKg4J_4PcwG84jC",
+      "image": "streambeats/albums/breaker.jpg",
+      "similar_albums": [
+        "03XjdYOXYg73IW8PO3jUx2",
+        "ego",
+        "groovy",
+        "lone-wolf",
+        "midnight-1"
+      ],
+      "name_original": "Breaker",
+      "name_fr": "Briseur",
+      "genre_original": "Synthwave",
+      "genre_fr": "Synthwave",
+      "moods_original": [
+        "dark"
+      ],
+      "moods_fr": [
+        "Sombre"
+      ]
+    },
+    "sunset": {
+      "slug": "sunset",
+      "name": "Sunset",
+      "url": "https://streambeats.com/album/sunset",
+      "genre_slug": "synthwave",
+      "genre": "Synthwave",
+      "artist": "StreamBeats by Harris Heller",
+      "official_track_count": 25,
+      "duration": "56:24",
+      "year": 2021,
+      "moods": [
+        "chill"
+      ],
+      "image_url": "https://i.scdn.co/image/ab67616d0000b273214719ce863a0d4d13091cca",
+      "spotify": "https://open.spotify.com/album/2J7rNyetOdpOLL2zMlTMjT",
+      "bandcamp": "https://streambeats.bandcamp.com/album/sunset",
+      "google_drive": "https://drive.google.com/drive/folders/196AfI6vYiSwKqb7ATKKg4J_4PcwG84jC",
+      "image": "streambeats/albums/sunset.jpg",
+      "similar_albums": [
+        "2J7rNyetOdpOLL2zMlTMjT",
+        "breaker",
+        "ego",
+        "groovy",
+        "lone-wolf"
+      ],
+      "name_original": "Sunset",
+      "name_fr": "Coucher de soleil",
+      "genre_original": "Synthwave",
+      "genre_fr": "Synthwave",
+      "moods_original": [
+        "chill"
+      ],
+      "moods_fr": [
+        "Détendu"
+      ]
+    },
+    "ego": {
+      "slug": "ego",
+      "name": "Ego",
+      "url": "https://streambeats.com/album/ego",
+      "genre_slug": "synthwave",
+      "genre": "Synthwave",
+      "artist": "StreamBeats by Harris Heller",
+      "official_track_count": 10,
+      "duration": "22:26",
+      "year": 2020,
+      "moods": [
+        "chill"
+      ],
+      "image_url": "https://i.scdn.co/image/ab67616d0000b2733de071384446a39346dea193",
+      "spotify": "https://open.spotify.com/album/3imkHCXWNcKYjbHCDMFs46",
+      "bandcamp": "https://streambeats.bandcamp.com/album/ego",
+      "google_drive": "https://drive.google.com/drive/folders/196AfI6vYiSwKqb7ATKKg4J_4PcwG84jC",
+      "image": "streambeats/albums/ego.jpg",
+      "similar_albums": [
+        "3imkHCXWNcKYjbHCDMFs46",
+        "breaker",
+        "groovy",
+        "lone-wolf",
+        "midnight-1"
+      ],
+      "name_original": "Ego",
+      "name_fr": "Ego",
+      "genre_original": "Synthwave",
+      "genre_fr": "Synthwave",
+      "moods_original": [
+        "chill"
+      ],
+      "moods_fr": [
+        "Détendu"
+      ]
+    },
+    "lone-wolf": {
+      "slug": "lone-wolf",
+      "name": "Lone Wolf",
+      "url": "https://streambeats.com/album/lone-wolf",
+      "genre_slug": "synthwave",
+      "genre": "Synthwave",
+      "artist": "StreamBeats by Harris Heller",
+      "official_track_count": 19,
+      "duration": "50:57",
+      "year": 2020,
+      "moods": [
+        "chill"
+      ],
+      "image_url": "https://i.scdn.co/image/ab67616d0000b273892dba278aeb41440b6bfa3f",
+      "spotify": "https://open.spotify.com/album/2qG9ANnqKOTDGzUqgc6A1B",
+      "bandcamp": "https://streambeats.bandcamp.com/album/lone-wolf",
+      "google_drive": "https://drive.google.com/drive/folders/196AfI6vYiSwKqb7ATKKg4J_4PcwG84jC",
+      "image": "streambeats/albums/lone-wolf.jpg",
+      "similar_albums": [
+        "2qG9ANnqKOTDGzUqgc6A1B",
+        "breaker",
+        "ego",
+        "groovy",
+        "midnight-1"
+      ],
+      "name_original": "Lone Wolf",
+      "name_fr": "Loup solitaire",
+      "genre_original": "Synthwave",
+      "genre_fr": "Synthwave",
+      "moods_original": [
+        "chill"
+      ],
+      "moods_fr": [
+        "Détendu"
+      ]
+    },
+    "renegade": {
+      "slug": "renegade",
+      "name": "Renegade",
+      "url": "https://streambeats.com/album/renegade",
+      "genre_slug": "synthwave",
+      "genre": "Synthwave",
+      "artist": "StreamBeats by Harris Heller",
+      "official_track_count": 20,
+      "duration": "45:17",
+      "year": 2020,
+      "moods": [
+        "chill"
+      ],
+      "image_url": "https://i.scdn.co/image/ab67616d0000b273bdf0de29badda06b0a4d65e3",
+      "spotify": "https://open.spotify.com/album/1GZv2WXML6ZlckyS0w4W96",
+      "bandcamp": "https://streambeats.bandcamp.com/album/renegade",
+      "google_drive": "https://drive.google.com/drive/folders/196AfI6vYiSwKqb7ATKKg4J_4PcwG84jC",
+      "image": "streambeats/albums/renegade.jpg",
+      "similar_albums": [
+        "1GZv2WXML6ZlckyS0w4W96",
+        "breaker",
+        "ego",
+        "groovy",
+        "lone-wolf"
+      ],
+      "name_original": "Renegade",
+      "name_fr": "Renégat",
+      "genre_original": "Synthwave",
+      "genre_fr": "Synthwave",
+      "moods_original": [
+        "chill"
+      ],
+      "moods_fr": [
+        "Détendu"
+      ]
+    }
+  },
+  "local_matches": {
+    "1. Arcade": {
+      "slug": "arcade",
+      "genre_slug": "chiptune",
+      "genre": "Chiptune",
+      "official_name": "Arcade",
+      "confidence": "exact_alias"
+    },
+    "1. Groove": {
+      "slug": "groove",
+      "genre_slug": "hifi",
+      "genre": "Hifi",
+      "official_name": "Groove",
+      "confidence": "exact_alias"
+    },
+    "1. Lifestyle": {
+      "slug": "lifestyle",
+      "genre_slug": "hip-hop",
+      "genre": "Hip-Hop",
+      "official_name": "Lifestyle",
+      "confidence": "exact_alias"
+    },
+    "1. Lights": {
+      "slug": "lights",
+      "genre_slug": "edm",
+      "genre": "EDM",
+      "official_name": "Lights",
+      "confidence": "exact_alias"
+    },
+    "1. Recon": {
+      "slug": "recon",
+      "genre_slug": "hip-hop",
+      "genre": "Hip-Hop",
+      "official_name": "Recon",
+      "confidence": "exact_alias"
+    },
+    "1. Renegade": {
+      "slug": "renegade",
+      "genre_slug": "synthwave",
+      "genre": "Synthwave",
+      "official_name": "Renegade",
+      "confidence": "exact_alias"
+    },
+    "10. Neko": {
+      "slug": "neko",
+      "genre_slug": "lofi",
+      "genre": "Lofi",
+      "official_name": "Neko",
+      "confidence": "exact_alias"
+    },
+    "10. Pastel": {
+      "slug": "pastel",
+      "genre_slug": "edm",
+      "genre": "EDM",
+      "official_name": "Pastel",
+      "confidence": "exact_alias"
+    },
+    "11. Low-key": {
+      "slug": "low-key",
+      "genre_slug": "edm",
+      "genre": "EDM",
+      "official_name": "Low-key",
+      "confidence": "exact_alias"
+    },
+    "11. Rain": {
+      "slug": "rain",
+      "genre_slug": "lofi",
+      "genre": "Lofi",
+      "official_name": "Rain",
+      "confidence": "exact_alias"
+    },
+    "12. Cherry Soda": {
+      "slug": "cherry-soda",
+      "genre_slug": "lofi",
+      "genre": "Lofi",
+      "official_name": "Cherry Soda",
+      "confidence": "exact_alias"
+    },
+    "12. Pulse": {
+      "slug": "pulse",
+      "genre_slug": "edm",
+      "genre": "EDM",
+      "official_name": "Pulse",
+      "confidence": "exact_alias"
+    },
+    "13. Nocturnal": {
+      "slug": "nocturnal",
+      "genre_slug": "edm",
+      "genre": "EDM",
+      "official_name": "Nocturnal",
+      "confidence": "exact_alias"
+    },
+    "13. Reflection_": {
+      "slug": "reflection",
+      "genre_slug": "lofi",
+      "genre": "Lofi",
+      "official_name": "Reflection",
+      "confidence": "exact_alias"
+    },
+    "14. Neon": {
+      "slug": "neon",
+      "genre_slug": "lofi",
+      "genre": "Lofi",
+      "official_name": "Neon",
+      "confidence": "exact_alias"
+    },
+    "15. Quest": {
+      "slug": "quest",
+      "genre_slug": "lofi",
+      "genre": "Lofi",
+      "official_name": "Quest",
+      "confidence": "exact_alias"
+    },
+    "16. Secluded": {
+      "slug": "secluded",
+      "genre_slug": "lofi",
+      "genre": "Lofi",
+      "official_name": "Secluded",
+      "confidence": "exact_alias"
+    },
+    "17. Electric": {
+      "slug": "electric",
+      "genre_slug": "lofi",
+      "genre": "Lofi",
+      "official_name": "Electric",
+      "confidence": "exact_alias"
+    },
+    "18. Moonwalk": {
+      "slug": "moonwalk",
+      "genre_slug": "edm",
+      "genre": "EDM",
+      "official_name": "Moonwalk",
+      "confidence": "exact_alias"
+    },
+    "19. Prime": {
+      "slug": "prime",
+      "genre_slug": "lofi",
+      "genre": "Lofi",
+      "official_name": "Prime",
+      "confidence": "exact_alias"
+    },
+    "2. Ghost": {
+      "slug": "ghost",
+      "genre_slug": "hip-hop",
+      "genre": "Hip-Hop",
+      "official_name": "Ghost",
+      "confidence": "exact_alias"
+    },
+    "2. Legend": {
+      "slug": "legend",
+      "genre_slug": "hip-hop",
+      "genre": "Hip-Hop",
+      "official_name": "Legend",
+      "confidence": "exact_alias"
+    },
+    "2. Lone Wolf": {
+      "slug": "lone-wolf",
+      "genre_slug": "synthwave",
+      "genre": "Synthwave",
+      "official_name": "Lone Wolf",
+      "confidence": "exact_alias"
+    },
+    "2. Pixel": {
+      "slug": "pixel",
+      "genre_slug": "chiptune",
+      "genre": "Chiptune",
+      "official_name": "Pixel",
+      "confidence": "exact_alias"
+    },
+    "2. Stage": {
+      "slug": "stage",
+      "genre_slug": "edm",
+      "genre": "EDM",
+      "official_name": "Stage",
+      "confidence": "exact_alias"
+    },
+    "20. Slaps": {
+      "slug": "slaps",
+      "genre_slug": "lofi",
+      "genre": "Lofi",
+      "official_name": "Slaps",
+      "confidence": "exact_alias"
+    },
+    "3. Assassin": {
+      "slug": "assassin",
+      "genre_slug": "hip-hop",
+      "genre": "Hip-Hop",
+      "official_name": "Assassin",
+      "confidence": "exact_alias"
+    },
+    "3. Cracked": {
+      "slug": "cracked",
+      "genre_slug": "hip-hop",
+      "genre": "Hip-Hop",
+      "official_name": "Cracked",
+      "confidence": "exact_alias"
+    },
+    "3. Dansu": {
+      "slug": "dansu",
+      "genre_slug": "edm",
+      "genre": "EDM",
+      "official_name": "DANSU",
+      "confidence": "exact_alias"
+    },
+    "3. Ego": {
+      "slug": "ego",
+      "genre_slug": "synthwave",
+      "genre": "Synthwave",
+      "official_name": "Ego",
+      "confidence": "exact_alias"
+    },
+    "3. Sakura Dreams": {
+      "slug": "sakura-dreams",
+      "genre_slug": "lofi",
+      "genre": "Lofi",
+      "official_name": "Sakura Dreams",
+      "confidence": "exact_alias"
+    },
+    "4. Bounce": {
+      "slug": "bounce",
+      "genre_slug": "hip-hop",
+      "genre": "Hip-Hop",
+      "official_name": "Bounce",
+      "confidence": "exact_alias"
+    },
+    "4. Breaker": {
+      "slug": "breaker",
+      "genre_slug": "synthwave",
+      "genre": "Synthwave",
+      "official_name": "Breaker",
+      "confidence": "exact_alias"
+    },
+    "4. In 4k": {
+      "slug": "in-4k",
+      "genre_slug": "lofi",
+      "genre": "Lofi",
+      "official_name": "In 4k",
+      "confidence": "exact_alias"
+    },
+    "4. Logic": {
+      "slug": "logic",
+      "genre_slug": "hip-hop",
+      "genre": "Hip-Hop",
+      "official_name": "Logic",
+      "confidence": "exact_alias"
+    },
+    "4. Shingu": {
+      "slug": "shingu",
+      "genre_slug": "edm",
+      "genre": "EDM",
+      "official_name": "SHINGU",
+      "confidence": "exact_alias"
+    },
+    "5. Ignition": {
+      "slug": "ignition",
+      "genre_slug": "hip-hop",
+      "genre": "Hip-Hop",
+      "official_name": "Ignition",
+      "confidence": "exact_alias"
+    },
+    "5. Midnight": {
+      "slug": "midnight",
+      "genre_slug": "hip-hop",
+      "genre": "Hip-Hop",
+      "official_name": "Midnight",
+      "confidence": "exact_alias"
+    },
+    "5. Ocularium": {
+      "slug": "ocularium",
+      "genre_slug": "lofi",
+      "genre": "Lofi",
+      "official_name": "Ocularium",
+      "confidence": "exact_alias"
+    },
+    "5. Royal": {
+      "slug": "royal",
+      "genre_slug": "edm",
+      "genre": "EDM",
+      "official_name": "Royal",
+      "confidence": "exact_alias"
+    },
+    "5. Sunset": {
+      "slug": "sunset",
+      "genre_slug": "synthwave",
+      "genre": "Synthwave",
+      "official_name": "Sunset",
+      "confidence": "exact_alias"
+    },
+    "6. Rose": {
+      "slug": "rose",
+      "genre_slug": "synthwave",
+      "genre": "Synthwave",
+      "official_name": "Rose",
+      "confidence": "exact_alias"
+    },
+    "6. Supreme": {
+      "slug": "supreme",
+      "genre_slug": "hip-hop",
+      "genre": "Hip-Hop",
+      "official_name": "Supreme",
+      "confidence": "exact_alias"
+    },
+    "6. Sus": {
+      "slug": "sus",
+      "genre_slug": "edm",
+      "genre": "EDM",
+      "official_name": "Sus",
+      "confidence": "exact_alias"
+    },
+    "6. Upside": {
+      "slug": "upside",
+      "genre_slug": "hip-hop",
+      "genre": "Hip-Hop",
+      "official_name": "Upside",
+      "confidence": "exact_alias"
+    },
+    "7. Gold": {
+      "slug": "gold",
+      "genre_slug": "lofi",
+      "genre": "Lofi",
+      "official_name": "Gold",
+      "confidence": "exact_alias"
+    },
+    "7. Midnight": {
+      "slug": "midnight-1",
+      "genre_slug": "synthwave",
+      "genre": "Synthwave",
+      "official_name": "Midnight",
+      "confidence": "exact_alias"
+    },
+    "7. Trouble": {
+      "slug": "trouble",
+      "genre_slug": "edm",
+      "genre": "EDM",
+      "official_name": "Trouble",
+      "confidence": "exact_alias"
+    },
+    "8. Drop": {
+      "slug": "drop",
+      "genre_slug": "edm",
+      "genre": "EDM",
+      "official_name": "Drop",
+      "confidence": "exact_alias"
+    },
+    "8. Groovy": {
+      "slug": "groovy",
+      "genre_slug": "synthwave",
+      "genre": "Synthwave",
+      "official_name": "Groovy",
+      "confidence": "exact_alias"
+    },
+    "8. White": {
+      "slug": "white",
+      "genre_slug": "lofi",
+      "genre": "Lofi",
+      "official_name": "White",
+      "confidence": "exact_alias"
+    },
+    "9. Insomnia_": {
+      "slug": "insomnia",
+      "genre_slug": "edm",
+      "genre": "EDM",
+      "official_name": "Insomnia",
+      "confidence": "exact_alias"
+    },
+    "9. Inu": {
+      "slug": "inu",
+      "genre_slug": "lofi",
+      "genre": "Lofi",
+      "official_name": "Inu",
+      "confidence": "exact_alias"
+    },
+    "A StreamBeats and Friends Christmas": {
+      "slug": "a-streambeats-and-friends-christmas",
+      "genre_slug": "christmas",
+      "genre": "Christmas",
+      "official_name": "A StreamBeats and Friends Christmas",
+      "confidence": "exact_alias"
+    },
+    "A StreamBeats and Friends Christmas (Instrumental)": {
+      "slug": "a-streambeats-and-friends-christmas-instrumental",
+      "genre_slug": "christmas",
+      "genre": "Christmas",
+      "official_name": "A StreamBeats and Friends Christmas (Instrumental)",
+      "confidence": "exact_alias"
+    },
+    "A Very Lo-Fi Christmas": {
+      "slug": "a-very-lo-fi-christmas",
+      "genre_slug": "christmas",
+      "genre": "Christmas",
+      "official_name": "A Very Lo-Fi Christmas",
+      "confidence": "exact_alias"
+    },
+    "Ambient": {
+      "slug": "diamonds",
+      "genre_slug": "ambient",
+      "genre": "Ambient",
+      "official_name": "Diamonds",
+      "confidence": "genre_track_count"
+    },
+    "Better When I'm High": {
+      "slug": "better-when-i-m-high",
+      "genre_slug": "edm",
+      "genre": "EDM",
+      "official_name": "Better When I'm High",
+      "confidence": "exact_alias"
+    },
+    "Certain Shade of Blue": {
+      "slug": "certain-shade-of-blue",
+      "genre_slug": "lofi",
+      "genre": "Lofi",
+      "official_name": "Certain Shade of Blue",
+      "confidence": "exact_alias"
+    },
+    "Christmas HiFi 1 - Candy Shop": {
+      "slug": "candy-shop",
+      "genre_slug": "christmas",
+      "genre": "Christmas",
+      "official_name": "Candy Shop",
+      "confidence": "exact_alias"
+    },
+    "Demon (Instrumentals) - StreamBeats Originals": {
+      "slug": "demon-instrumental",
+      "genre_slug": "rock",
+      "genre": "Rock",
+      "official_name": "Demon (Instrumental)",
+      "confidence": "exact_alias"
+    },
+    "Demon - StreamBeats Originals": {
+      "slug": "demon",
+      "genre_slug": "rock",
+      "genre": "Rock",
+      "official_name": "Demon",
+      "confidence": "exact_alias"
+    },
+    "Evergreen": {
+      "slug": "evergreen",
+      "genre_slug": "christmas",
+      "genre": "Christmas",
+      "official_name": "Evergreen",
+      "confidence": "exact_alias"
+    },
+    "Fantasy Arcade": {
+      "slug": "fantasy-arcade",
+      "genre_slug": "lofi",
+      "genre": "Lofi",
+      "official_name": "Fantasy Arcade",
+      "confidence": "exact_alias"
+    },
+    "Fly Me Away": {
+      "slug": "fly-me-away",
+      "genre_slug": "collabs",
+      "genre": "Collabs",
+      "official_name": "Fly Me Away",
+      "confidence": "exact_alias"
+    },
+    "High at the Planetarium": {
+      "slug": "high-at-the-planetarium",
+      "genre_slug": "lofi",
+      "genre": "Lofi",
+      "official_name": "High at the Planetarium",
+      "confidence": "exact_alias"
+    },
+    "If I F_ck Up This Christmas": {
+      "slug": "if-i-fuck-up-this-christmas-naughty-version",
+      "genre_slug": "christmas",
+      "genre": "Christmas",
+      "official_name": "If I Fuck Up This Christmas (Naughty Version)",
+      "confidence": "exact_alias"
+    },
+    "If I Mess Up This Christmas": {
+      "slug": "if-i-mess-up-this-christmas",
+      "genre_slug": "christmas",
+      "genre": "Christmas",
+      "official_name": "If I Mess Up This Christmas",
+      "confidence": "exact_alias"
+    },
+    "If I Mess Up This Christmas (Instrumental)": {
+      "slug": "if-i-mess-up-this-christmas-instrumental",
+      "genre_slug": "christmas",
+      "genre": "Christmas",
+      "official_name": "If I Mess Up This Christmas (Instrumental)",
+      "confidence": "exact_alias"
+    },
+    "Kill It Anyway": {
+      "slug": "kill-it-anyway",
+      "genre_slug": "rock",
+      "genre": "Rock",
+      "official_name": "Kill It Anyway",
+      "confidence": "exact_alias"
+    },
+    "What If (Piano Version)": {
+      "slug": "what-if-piano-version",
+      "genre_slug": "collabs",
+      "genre": "Collabs",
+      "official_name": "What If (Piano Version)",
+      "confidence": "exact_alias"
+    }
+  }
 }
