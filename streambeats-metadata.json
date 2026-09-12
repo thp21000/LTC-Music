@@ -1,6 +1,6 @@
 {
   "source": "https://streambeats.com",
-  "synced_at": "2026-09-12T15:28:15.464128+00:00",
+  "synced_at": "2026-09-12T15:38:33.078874+00:00",
   "genre_count": 11,
   "album_count": 83,
   "genres": {
@@ -2258,96 +2258,502 @@
     }
   },
   "local_matches": {
-    "1. High At The Planetarium": {
-      "slug": "high-at-the-planetarium",
-      "genre_slug": "lofi",
-      "genre": "Lofi",
-      "official_name": "High at the Planetarium",
-      "confidence": "fuzzy"
+    "1. Arcade": {
+      "slug": "arcade",
+      "genre_slug": "chiptune",
+      "genre": "Chiptune",
+      "official_name": "Arcade",
+      "confidence": "exact_alias"
     },
-    "2. Fantasy Arcade": {
-      "slug": "fantasy-arcade",
-      "genre_slug": "lofi",
-      "genre": "Lofi",
-      "official_name": "Fantasy Arcade",
-      "confidence": "fuzzy"
+    "1. Groove": {
+      "slug": "groove",
+      "genre_slug": "hifi",
+      "genre": "Hifi",
+      "official_name": "Groove",
+      "confidence": "exact_alias"
     },
-    "6. Certain Shade Of Blue": {
-      "slug": "certain-shade-of-blue",
+    "1. Lifestyle": {
+      "slug": "lifestyle",
+      "genre_slug": "hip-hop",
+      "genre": "Hip-Hop",
+      "official_name": "Lifestyle",
+      "confidence": "exact_alias"
+    },
+    "1. Lights": {
+      "slug": "lights",
+      "genre_slug": "edm",
+      "genre": "EDM",
+      "official_name": "Lights",
+      "confidence": "exact_alias"
+    },
+    "1. Recon": {
+      "slug": "recon",
+      "genre_slug": "hip-hop",
+      "genre": "Hip-Hop",
+      "official_name": "Recon",
+      "confidence": "exact_alias"
+    },
+    "1. Renegade": {
+      "slug": "renegade",
+      "genre_slug": "synthwave",
+      "genre": "Synthwave",
+      "official_name": "Renegade",
+      "confidence": "exact_alias"
+    },
+    "10. Neko": {
+      "slug": "neko",
       "genre_slug": "lofi",
       "genre": "Lofi",
-      "official_name": "Certain Shade of Blue",
-      "confidence": "fuzzy"
+      "official_name": "Neko",
+      "confidence": "exact_alias"
+    },
+    "10. Pastel": {
+      "slug": "pastel",
+      "genre_slug": "edm",
+      "genre": "EDM",
+      "official_name": "Pastel",
+      "confidence": "exact_alias"
+    },
+    "11. Low-key": {
+      "slug": "low-key",
+      "genre_slug": "edm",
+      "genre": "EDM",
+      "official_name": "Low-key",
+      "confidence": "exact_alias"
+    },
+    "11. Rain": {
+      "slug": "rain",
+      "genre_slug": "lofi",
+      "genre": "Lofi",
+      "official_name": "Rain",
+      "confidence": "exact_alias"
+    },
+    "12. Cherry Soda": {
+      "slug": "cherry-soda",
+      "genre_slug": "lofi",
+      "genre": "Lofi",
+      "official_name": "Cherry Soda",
+      "confidence": "exact_alias"
+    },
+    "12. Pulse": {
+      "slug": "pulse",
+      "genre_slug": "edm",
+      "genre": "EDM",
+      "official_name": "Pulse",
+      "confidence": "exact_alias"
+    },
+    "13. Nocturnal": {
+      "slug": "nocturnal",
+      "genre_slug": "edm",
+      "genre": "EDM",
+      "official_name": "Nocturnal",
+      "confidence": "exact_alias"
+    },
+    "13. Reflection_": {
+      "slug": "reflection",
+      "genre_slug": "lofi",
+      "genre": "Lofi",
+      "official_name": "Reflection",
+      "confidence": "exact_alias"
+    },
+    "14. Neon": {
+      "slug": "neon",
+      "genre_slug": "lofi",
+      "genre": "Lofi",
+      "official_name": "Neon",
+      "confidence": "exact_alias"
+    },
+    "15. Quest": {
+      "slug": "quest",
+      "genre_slug": "lofi",
+      "genre": "Lofi",
+      "official_name": "Quest",
+      "confidence": "exact_alias"
+    },
+    "16. Secluded": {
+      "slug": "secluded",
+      "genre_slug": "lofi",
+      "genre": "Lofi",
+      "official_name": "Secluded",
+      "confidence": "exact_alias"
+    },
+    "17. Electric": {
+      "slug": "electric",
+      "genre_slug": "lofi",
+      "genre": "Lofi",
+      "official_name": "Electric",
+      "confidence": "exact_alias"
+    },
+    "18. Moonwalk": {
+      "slug": "moonwalk",
+      "genre_slug": "edm",
+      "genre": "EDM",
+      "official_name": "Moonwalk",
+      "confidence": "exact_alias"
+    },
+    "19. Prime": {
+      "slug": "prime",
+      "genre_slug": "lofi",
+      "genre": "Lofi",
+      "official_name": "Prime",
+      "confidence": "exact_alias"
+    },
+    "2. Ghost": {
+      "slug": "ghost",
+      "genre_slug": "hip-hop",
+      "genre": "Hip-Hop",
+      "official_name": "Ghost",
+      "confidence": "exact_alias"
+    },
+    "2. Legend": {
+      "slug": "legend",
+      "genre_slug": "hip-hop",
+      "genre": "Hip-Hop",
+      "official_name": "Legend",
+      "confidence": "exact_alias"
+    },
+    "2. Lone Wolf": {
+      "slug": "lone-wolf",
+      "genre_slug": "synthwave",
+      "genre": "Synthwave",
+      "official_name": "Lone Wolf",
+      "confidence": "exact_alias"
+    },
+    "2. Pixel": {
+      "slug": "pixel",
+      "genre_slug": "chiptune",
+      "genre": "Chiptune",
+      "official_name": "Pixel",
+      "confidence": "exact_alias"
+    },
+    "2. Stage": {
+      "slug": "stage",
+      "genre_slug": "edm",
+      "genre": "EDM",
+      "official_name": "Stage",
+      "confidence": "exact_alias"
+    },
+    "20. Slaps": {
+      "slug": "slaps",
+      "genre_slug": "lofi",
+      "genre": "Lofi",
+      "official_name": "Slaps",
+      "confidence": "exact_alias"
+    },
+    "3. Assassin": {
+      "slug": "assassin",
+      "genre_slug": "hip-hop",
+      "genre": "Hip-Hop",
+      "official_name": "Assassin",
+      "confidence": "exact_alias"
+    },
+    "3. Cracked": {
+      "slug": "cracked",
+      "genre_slug": "hip-hop",
+      "genre": "Hip-Hop",
+      "official_name": "Cracked",
+      "confidence": "exact_alias"
+    },
+    "3. Dansu": {
+      "slug": "dansu",
+      "genre_slug": "edm",
+      "genre": "EDM",
+      "official_name": "DANSU",
+      "confidence": "exact_alias"
+    },
+    "3. Ego": {
+      "slug": "ego",
+      "genre_slug": "synthwave",
+      "genre": "Synthwave",
+      "official_name": "Ego",
+      "confidence": "exact_alias"
+    },
+    "3. Sakura Dreams": {
+      "slug": "sakura-dreams",
+      "genre_slug": "lofi",
+      "genre": "Lofi",
+      "official_name": "Sakura Dreams",
+      "confidence": "exact_alias"
+    },
+    "4. Bounce": {
+      "slug": "bounce",
+      "genre_slug": "hip-hop",
+      "genre": "Hip-Hop",
+      "official_name": "Bounce",
+      "confidence": "exact_alias"
+    },
+    "4. Breaker": {
+      "slug": "breaker",
+      "genre_slug": "synthwave",
+      "genre": "Synthwave",
+      "official_name": "Breaker",
+      "confidence": "exact_alias"
+    },
+    "4. In 4k": {
+      "slug": "in-4k",
+      "genre_slug": "lofi",
+      "genre": "Lofi",
+      "official_name": "In 4k",
+      "confidence": "exact_alias"
+    },
+    "4. Logic": {
+      "slug": "logic",
+      "genre_slug": "hip-hop",
+      "genre": "Hip-Hop",
+      "official_name": "Logic",
+      "confidence": "exact_alias"
+    },
+    "4. Shingu": {
+      "slug": "shingu",
+      "genre_slug": "edm",
+      "genre": "EDM",
+      "official_name": "SHINGU",
+      "confidence": "exact_alias"
+    },
+    "5. Ignition": {
+      "slug": "ignition",
+      "genre_slug": "hip-hop",
+      "genre": "Hip-Hop",
+      "official_name": "Ignition",
+      "confidence": "exact_alias"
+    },
+    "5. Midnight": {
+      "slug": "midnight",
+      "genre_slug": "hip-hop",
+      "genre": "Hip-Hop",
+      "official_name": "Midnight",
+      "confidence": "exact_alias"
+    },
+    "5. Ocularium": {
+      "slug": "ocularium",
+      "genre_slug": "lofi",
+      "genre": "Lofi",
+      "official_name": "Ocularium",
+      "confidence": "exact_alias"
+    },
+    "5. Royal": {
+      "slug": "royal",
+      "genre_slug": "edm",
+      "genre": "EDM",
+      "official_name": "Royal",
+      "confidence": "exact_alias"
+    },
+    "5. Sunset": {
+      "slug": "sunset",
+      "genre_slug": "synthwave",
+      "genre": "Synthwave",
+      "official_name": "Sunset",
+      "confidence": "exact_alias"
+    },
+    "6. Rose": {
+      "slug": "rose",
+      "genre_slug": "synthwave",
+      "genre": "Synthwave",
+      "official_name": "Rose",
+      "confidence": "exact_alias"
+    },
+    "6. Supreme": {
+      "slug": "supreme",
+      "genre_slug": "hip-hop",
+      "genre": "Hip-Hop",
+      "official_name": "Supreme",
+      "confidence": "exact_alias"
+    },
+    "6. Sus": {
+      "slug": "sus",
+      "genre_slug": "edm",
+      "genre": "EDM",
+      "official_name": "Sus",
+      "confidence": "exact_alias"
+    },
+    "6. Upside": {
+      "slug": "upside",
+      "genre_slug": "hip-hop",
+      "genre": "Hip-Hop",
+      "official_name": "Upside",
+      "confidence": "exact_alias"
+    },
+    "7. Gold": {
+      "slug": "gold",
+      "genre_slug": "lofi",
+      "genre": "Lofi",
+      "official_name": "Gold",
+      "confidence": "exact_alias"
+    },
+    "7. Midnight": {
+      "slug": "midnight-1",
+      "genre_slug": "synthwave",
+      "genre": "Synthwave",
+      "official_name": "Midnight",
+      "confidence": "exact_alias"
+    },
+    "7. Trouble": {
+      "slug": "trouble",
+      "genre_slug": "edm",
+      "genre": "EDM",
+      "official_name": "Trouble",
+      "confidence": "exact_alias"
+    },
+    "8. Drop": {
+      "slug": "drop",
+      "genre_slug": "edm",
+      "genre": "EDM",
+      "official_name": "Drop",
+      "confidence": "exact_alias"
+    },
+    "8. Groovy": {
+      "slug": "groovy",
+      "genre_slug": "synthwave",
+      "genre": "Synthwave",
+      "official_name": "Groovy",
+      "confidence": "exact_alias"
+    },
+    "8. White": {
+      "slug": "white",
+      "genre_slug": "lofi",
+      "genre": "Lofi",
+      "official_name": "White",
+      "confidence": "exact_alias"
+    },
+    "9. Insomnia_": {
+      "slug": "insomnia",
+      "genre_slug": "edm",
+      "genre": "EDM",
+      "official_name": "Insomnia",
+      "confidence": "exact_alias"
+    },
+    "9. Inu": {
+      "slug": "inu",
+      "genre_slug": "lofi",
+      "genre": "Lofi",
+      "official_name": "Inu",
+      "confidence": "exact_alias"
     },
     "A StreamBeats and Friends Christmas": {
       "slug": "a-streambeats-and-friends-christmas",
       "genre_slug": "christmas",
       "genre": "Christmas",
       "official_name": "A StreamBeats and Friends Christmas",
-      "confidence": "exact"
+      "confidence": "exact_alias"
     },
     "A StreamBeats and Friends Christmas (Instrumental)": {
       "slug": "a-streambeats-and-friends-christmas-instrumental",
       "genre_slug": "christmas",
       "genre": "Christmas",
       "official_name": "A StreamBeats and Friends Christmas (Instrumental)",
-      "confidence": "exact"
+      "confidence": "exact_alias"
     },
     "A Very Lo-Fi Christmas": {
       "slug": "a-very-lo-fi-christmas",
       "genre_slug": "christmas",
       "genre": "Christmas",
       "official_name": "A Very Lo-Fi Christmas",
-      "confidence": "exact"
+      "confidence": "exact_alias"
     },
-    "Better When I_m High": {
+    "Ambient": {
+      "slug": "diamonds",
+      "genre_slug": "ambient",
+      "genre": "Ambient",
+      "official_name": "Diamonds",
+      "confidence": "genre_track_count"
+    },
+    "Better When I'm High": {
       "slug": "better-when-i-m-high",
       "genre_slug": "edm",
       "genre": "EDM",
       "official_name": "Better When I'm High",
-      "confidence": "exact"
+      "confidence": "exact_alias"
+    },
+    "Certain Shade of Blue": {
+      "slug": "certain-shade-of-blue",
+      "genre_slug": "lofi",
+      "genre": "Lofi",
+      "official_name": "Certain Shade of Blue",
+      "confidence": "exact_alias"
+    },
+    "Christmas HiFi 1 - Candy Shop": {
+      "slug": "candy-shop",
+      "genre_slug": "christmas",
+      "genre": "Christmas",
+      "official_name": "Candy Shop",
+      "confidence": "exact_alias"
+    },
+    "Demon (Instrumentals) - StreamBeats Originals": {
+      "slug": "demon-instrumental",
+      "genre_slug": "rock",
+      "genre": "Rock",
+      "official_name": "Demon (Instrumental)",
+      "confidence": "exact_alias"
+    },
+    "Demon - StreamBeats Originals": {
+      "slug": "demon",
+      "genre_slug": "rock",
+      "genre": "Rock",
+      "official_name": "Demon",
+      "confidence": "exact_alias"
     },
     "Evergreen": {
       "slug": "evergreen",
       "genre_slug": "christmas",
       "genre": "Christmas",
       "official_name": "Evergreen",
-      "confidence": "exact"
+      "confidence": "exact_alias"
+    },
+    "Fantasy Arcade": {
+      "slug": "fantasy-arcade",
+      "genre_slug": "lofi",
+      "genre": "Lofi",
+      "official_name": "Fantasy Arcade",
+      "confidence": "exact_alias"
     },
     "Fly Me Away": {
       "slug": "fly-me-away",
       "genre_slug": "collabs",
       "genre": "Collabs",
       "official_name": "Fly Me Away",
-      "confidence": "exact"
+      "confidence": "exact_alias"
+    },
+    "High at the Planetarium": {
+      "slug": "high-at-the-planetarium",
+      "genre_slug": "lofi",
+      "genre": "Lofi",
+      "official_name": "High at the Planetarium",
+      "confidence": "exact_alias"
+    },
+    "If I F_ck Up This Christmas": {
+      "slug": "if-i-fuck-up-this-christmas-naughty-version",
+      "genre_slug": "christmas",
+      "genre": "Christmas",
+      "official_name": "If I Fuck Up This Christmas (Naughty Version)",
+      "confidence": "exact_alias"
     },
     "If I Mess Up This Christmas": {
       "slug": "if-i-mess-up-this-christmas",
       "genre_slug": "christmas",
       "genre": "Christmas",
       "official_name": "If I Mess Up This Christmas",
-      "confidence": "exact"
+      "confidence": "exact_alias"
     },
     "If I Mess Up This Christmas (Instrumental)": {
       "slug": "if-i-mess-up-this-christmas-instrumental",
       "genre_slug": "christmas",
       "genre": "Christmas",
       "official_name": "If I Mess Up This Christmas (Instrumental)",
-      "confidence": "exact"
+      "confidence": "exact_alias"
     },
     "Kill It Anyway": {
       "slug": "kill-it-anyway",
       "genre_slug": "rock",
       "genre": "Rock",
       "official_name": "Kill It Anyway",
-      "confidence": "exact"
+      "confidence": "exact_alias"
     },
     "What If (Piano Version)": {
       "slug": "what-if-piano-version",
       "genre_slug": "collabs",
       "genre": "Collabs",
       "official_name": "What If (Piano Version)",
-      "confidence": "exact"
+      "confidence": "exact_alias"
     }
   }
 }
