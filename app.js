@@ -1,6 +1,6 @@
 let allTracks=[];
 let view={level:'categories',category:null,album:null};
-let query='',liveEndpoint='',liveOnline=false;
+let query='',liveEndpoint='',liveOnline=false,directRequests=false;
 const pending=new Set();
 const PALETTE=[['#0B4C55','#0E6872'],['#2F673A','#4D8757'],['#77542E','#A17843'],['#5B456F','#80639A'],['#7A3948','#A65368'],['#315B77','#4E7D9E'],['#655E2E','#8F8643'],['#6E4535','#96614B']];
 
@@ -22,7 +22,7 @@ async function copyCommand(id){
 }
 
 async function requestTrack(id){
-  if(!liveOnline||!liveEndpoint)return copyCommand(id);
+  if(!liveOnline||!directRequests||!liveEndpoint)return copyCommand(id);
   if(pending.has(String(id)))return;
   pending.add(String(id));updateButtons();
   saveViewer();
@@ -39,7 +39,7 @@ async function requestTrack(id){
     toast(data.message||'Morceau ajouté à la file.');
     await refreshLive();
   }catch(e){
-    liveOnline=false;updateLiveMode();updateButtons();
+    liveOnline=false;directRequests=false;updateLiveMode();updateButtons();
     toast('Relay inaccessible. Le bouton repasse en mode commande chat.',true);
     await copyCommand(id);
   }finally{
@@ -102,8 +102,8 @@ function updateButtons(){
   document.querySelectorAll('.request').forEach(b=>{
     const busy=pending.has(String(b.dataset.id));
     b.disabled=busy;
-    b.textContent=busy?'Ajout…':(liveOnline?'Ajouter à la file':'Copier !song');
-    b.classList.toggle('fallback-btn',!liveOnline);
+    b.textContent=busy?'Ajout…':(liveOnline&&directRequests?'Ajouter à la file':'Copier !song');
+    b.classList.toggle('fallback-btn',!(liveOnline&&directRequests));
   });
 }
 function renderCategories(){
@@ -127,12 +127,12 @@ function renderSearch(){
 function render(){renderBreadcrumb();if(query.trim())return renderSearch();if(view.level==='categories')return renderCategories();if(view.level==='albums')return renderAlbums();renderTracks()}
 
 function renderLiveOffline(msg='Le morceau en cours apparaîtra ici pendant le live.'){
-  liveOnline=false;$('#liveDot').classList.add('offline');$('#liveUpdated').textContent='hors ligne';
+  liveOnline=false;directRequests=false;$('#liveDot').classList.add('offline');$('#liveUpdated').textContent='hors ligne';
   $('#liveCurrent').innerHTML=`<div><span class="kicker">En cours</span><strong>Le direct musical est hors ligne</strong><span>${esc(msg)}</span></div>`;
   $('#queueCount').textContent='0';$('#liveQueue').innerHTML='<div class="queue-empty">Aucune file publique pour le moment.</div>';updateLiveMode();updateButtons();
 }
 function updateLiveMode(){
-  $('#requestStatus').textContent=liveOnline?'Actives — ajout direct à la file. 1 demande en attente maximum par navigateur.':'Hors ligne — le bouton copiera la commande chat.';
+  $('#requestStatus').textContent=!liveOnline?'Hors ligne — le bouton copiera la commande chat.':directRequests?'Actives — ajout direct à la file. 1 demande en attente maximum par navigateur.':'Live visible — mets le serveur LTC en V1.6 pour activer les demandes directes.';
 }
 async function loadLiveConfig(){
   try{
@@ -146,7 +146,7 @@ async function refreshLive(){
   if(!liveEndpoint)return renderLiveOffline();
   try{
     const r=await fetch(liveEndpoint+'/live',{cache:'no-store'});if(!r.ok)throw 0;
-    const s=await r.json();liveOnline=true;$('#liveDot').classList.remove('offline');$('#liveUpdated').textContent='en direct';
+    const s=await r.json();liveOnline=true;directRequests=s.requests_enabled===true;$('#liveDot').classList.remove('offline');$('#liveUpdated').textContent='en direct';
     $('#liveCurrent').innerHTML=s.current?`<div><span class="kicker">En cours</span><strong>${esc(s.current.title)}</strong><span>${esc(s.current.artist)} · ${esc(s.current.album||'')} · ${esc(s.current.category||'')}</span></div>`:'<div><span class="kicker">En cours</span><strong>Aucun morceau</strong><span>Le lecteur attend le prochain titre.</span></div>';
     const q=Array.isArray(s.queue)?s.queue:[];$('#queueCount').textContent=s.queue_length||q.length||0;
     let h=q.slice(0,5).map(x=>`<div class="queue-row"><span class="queue-pos">${x.position}</span><div><strong>${esc(x.title)}</strong><span>${esc(x.requested_by?('Demandé par '+x.requested_by):(x.album||''))}</span></div></div>`).join('');
