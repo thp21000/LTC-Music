@@ -16,13 +16,20 @@ function saveViewer(){const v=viewer();if(v)localStorage.setItem('ltcMusicViewer
 function genreMetaByName(name,slug=''){if(slug&&sbMeta.genres?.[slug])return sbMeta.genres[slug];return Object.values(sbMeta.genres||{}).find(g=>norm(g.name)===norm(name))||null}
 function albumMetaByName(name,genre='',slug=''){if(slug&&sbMeta.albums?.[slug])return sbMeta.albums[slug];return Object.values(sbMeta.albums||{}).find(a=>norm(a.name)===norm(name)&&(!genre||norm(a.genre)===norm(genre)))||Object.values(sbMeta.albums||{}).find(a=>norm(a.name)===norm(name))||null}
 function imgSrc(meta,fallback=''){return meta?.image||meta?.image_url||fallback||''}
+function frTitle(t){return t?.title_fr||t?.title||''}
+function originalTitle(t){return t?.title_original||t?.title||''}
+function frAlbum(t){return t?.album_fr||t?.album||''}
+function originalAlbum(t){return t?.album_original||t?.album||''}
+function frCategory(t){return t?.category_fr||t?.category||'À classer'}
+function originalCategory(t){return t?.category_original||t?.category||'À classer'}
+function originalLine(fr,original){return fr&&original&&norm(fr)!==norm(original)?`<div class="original-name">${esc(original)}</div>`:''}
 
 async function copyCommand(id){const cmd='!song #'+id;try{await navigator.clipboard.writeText(cmd)}catch(e){const ta=document.createElement('textarea');ta.value=cmd;document.body.appendChild(ta);ta.select();document.execCommand('copy');ta.remove()}toast('Relay hors ligne — commande copiée : '+cmd)}
 async function requestTrack(id){if(!liveOnline||!directRequests||!liveEndpoint)return copyCommand(id);if(pending.has(String(id)))return;pending.add(String(id));updateButtons();saveViewer();try{const r=await fetch(liveEndpoint+'/request',{method:'POST',mode:'cors',cache:'no-store',headers:{'Content-Type':'application/json'},body:JSON.stringify({track_id:Number(id),viewer:viewer(),client_id:clientId()})});const data=await r.json().catch(()=>({ok:false,message:'Réponse invalide du relay.'}));if(!r.ok||!data.ok){toast(data.message||'Demande refusée.',true);return}toast(data.message||'Morceau ajouté à la file.');await refreshLive()}catch(e){liveOnline=false;directRequests=false;updateLiveMode();updateButtons();toast('Relay inaccessible. Le bouton repasse en mode commande chat.',true);await copyCommand(id)}finally{pending.delete(String(id));updateButtons()}}
 
-function groupCategories(){const m=new Map();for(const t of allTracks){const c=t.category||'À classer';if(!m.has(c))m.set(c,{name:c,tracks:0,albums:new Set(),genre_slug:t.genre_slug||''});const x=m.get(c);x.tracks++;x.albums.add(t.album||'Sans album');if(!x.genre_slug&&t.genre_slug)x.genre_slug=t.genre_slug}return [...m.values()].sort((a,b)=>a.name.localeCompare(b.name,'fr'))}
-function groupAlbums(category){const m=new Map();for(const t of allTracks.filter(t=>(t.category||'À classer')===category)){const a=t.album||'Sans album';if(!m.has(a))m.set(a,{name:a,category,tracks:0,cover:t.cover||'',album_slug:t.album_slug||'',genre_slug:t.genre_slug||'',artist:t.artist||'StreamBeats'});const x=m.get(a);x.tracks++;if(!x.cover&&t.cover)x.cover=t.cover;if(!x.album_slug&&t.album_slug)x.album_slug=t.album_slug}return [...m.values()].sort((a,b)=>a.name.localeCompare(b.name,'fr'))}
-function tracksFor(c,a){return allTracks.filter(t=>(t.category||'À classer')===c&&(t.album||'Sans album')===a).sort((x,y)=>x.title.localeCompare(y.title,'fr',{numeric:true}))}
+function groupCategories(){const m=new Map();for(const t of allTracks){const c=originalCategory(t);if(!m.has(c))m.set(c,{name:c,name_fr:frCategory(t),tracks:0,albums:new Set(),genre_slug:t.genre_slug||''});const x=m.get(c);x.tracks++;x.albums.add(originalAlbum(t)||'Sans album');if(!x.genre_slug&&t.genre_slug)x.genre_slug=t.genre_slug;if(!x.name_fr)x.name_fr=frCategory(t)}return [...m.values()].sort((a,b)=>(a.name_fr||a.name).localeCompare(b.name_fr||b.name,'fr'))}
+function groupAlbums(category){const m=new Map();for(const t of allTracks.filter(t=>originalCategory(t)===category)){const a=originalAlbum(t)||'Sans album';if(!m.has(a))m.set(a,{name:a,name_fr:frAlbum(t),category,category_fr:frCategory(t),tracks:0,cover:t.cover||'',album_slug:t.album_slug||'',genre_slug:t.genre_slug||'',artist:t.artist||'StreamBeats'});const x=m.get(a);x.tracks++;if(!x.cover&&t.cover)x.cover=t.cover;if(!x.album_slug&&t.album_slug)x.album_slug=t.album_slug;if(!x.name_fr)x.name_fr=frAlbum(t)}return [...m.values()].sort((a,b)=>(a.name_fr||a.name).localeCompare(b.name_fr||b.name,'fr'))}
+function tracksFor(c,a){return allTracks.filter(t=>originalCategory(t)===c&&originalAlbum(t)===a).sort((x,y)=>frTitle(x).localeCompare(frTitle(y),'fr',{numeric:true}))}
 function urlForView(level,category=null,album=null){
   const u=new URL(window.location.href);
   u.search='';
@@ -55,26 +62,109 @@ window.addEventListener('popstate',e=>{
   render();
   window.scrollTo({top:$('#breadcrumb').offsetTop-12,behavior:'smooth'});
 });
-function renderBreadcrumb(){const b=$('#breadcrumb');let h=`<button class="crumb ${view.level==='categories'?'active':''}" data-l="categories">Genres</button>`;if(view.category)h+=`<span>›</span><button class="crumb ${view.level==='albums'?'active':''}" data-l="albums">${esc(view.category)}</button>`;if(view.album)h+=`<span>›</span><span class="crumb active">${esc(view.album)}</span>`;b.innerHTML=h;b.querySelector('[data-l="categories"]')?.addEventListener('click',()=>setView('categories'));b.querySelector('[data-l="albums"]')?.addEventListener('click',()=>setView('albums',view.category))}
+function renderBreadcrumb(){const b=$('#breadcrumb');let h=`<button class="crumb ${view.level==='categories'?'active':''}" data-l="categories">Genres</button>`;if(view.category){const first=allTracks.find(t=>originalCategory(t)===view.category);h+=`<span>›</span><button class="crumb ${view.level==='albums'?'active':''}" data-l="albums">${esc(first?frCategory(first):view.category)}</button>`}if(view.album){const first=tracksFor(view.category,view.album)[0];h+=`<span>›</span><span class="crumb active">${esc(first?frAlbum(first):view.album)}</span>`}b.innerHTML=h;b.querySelector('[data-l="categories"]')?.addEventListener('click',()=>setView('categories'));b.querySelector('[data-l="albums"]')?.addEventListener('click',()=>setView('albums',view.category))}
 function coverHTML(item,kind){const meta=kind==='category'?genreMetaByName(item.name,item.genre_slug):albumMetaByName(item.name,item.category,item.album_slug);const src=imgSrc(meta,item.cover);const[a,b]=colors(kind==='category'?item.name:(item.category||item.name));return `<div class="cover ${kind}-cover ${src?'':'fallback'}" style="--ca:${a};--cb:${b}">${src?`<img src="${esc(src)}" alt="${esc(item.name)}" loading="lazy" onerror="this.remove();this.parentElement.classList.add('fallback')">`:''}<span>${esc(initials(item.name))}</span></div>`}
-function searchTracks(q){const n=norm(q);if(!n)return[];return allTracks.filter(t=>norm([t.title,t.artist,t.category,t.album,(t.moods||[]).join(' '),t.id].join(' ')).includes(n))}
+function searchTracks(q){const n=norm(q);if(!n)return[];return allTracks.filter(t=>norm([t.title,t.title_fr,t.artist,t.category,t.category_fr,t.album,t.album_fr,(t.moods||[]).join(' '),(t.moods_fr||[]).join(' '),t.id].join(' ')).includes(n))}
 function chips(values){return (values||[]).filter(Boolean).map(x=>`<span class="mood">${esc(x)}</span>`).join('')}
 
-function renderContext(){const c=$('#contextHeader');if(view.level==='categories'||query.trim()){c.hidden=true;c.innerHTML='';return}if(view.level==='albums'){const first=allTracks.find(t=>(t.category||'À classer')===view.category);const meta=genreMetaByName(view.category,first?.genre_slug||'');if(!meta){c.hidden=true;c.innerHTML='';return}c.hidden=false;c.innerHTML=`<div class="context-genre">${imgSrc(meta)?`<img src="${esc(imgSrc(meta))}" alt="" loading="lazy">`:''}<div><span class="kicker">Genre StreamBeats</span><h2>${esc(meta.name||view.category)}</h2><p>${esc(meta.description||'')}</p><div class="context-stats"><strong>${groupAlbums(view.category).length}</strong> album${groupAlbums(view.category).length>1?'s':''}</div></div></div>`;return}if(view.level==='tracks'){const tracks=tracksFor(view.category,view.album);const t=tracks[0];const meta=albumMetaByName(view.album,view.category,t?.album_slug||'');if(!meta){c.hidden=true;c.innerHTML='';return}const src=imgSrc(meta,t?.cover||'');c.hidden=false;c.innerHTML=`<div class="context-album">${src?`<img class="album-hero-cover" src="${esc(src)}" alt="${esc(meta.name)}" loading="lazy">`:''}<div><span class="kicker">${esc(meta.genre||view.category)}</span><h2>${esc(meta.name||view.album)}</h2><p class="album-artist">${esc(meta.artist||t?.artist||'StreamBeats')}</p><div class="context-stats">${meta.year?`<strong>${meta.year}</strong> · `:''}${meta.duration?`${esc(meta.duration)} · `:''}<strong>${tracks.length}</strong> morceau${tracks.length>1?'x':''}</div><div class="moods">${chips(meta.moods)}</div>${meta.spotify?`<div class="album-links"><a href="${esc(meta.spotify)}" target="_blank" rel="noopener">Spotify ↗</a></div>`:''}</div></div>`}}
+function renderContext(){
+  const c=$('#contextHeader');
+  if(view.level==='categories'||query.trim()){c.hidden=true;c.innerHTML='';return}
 
-function trackCard(t){const[a,b]=colors(t.category||'À classer');return `<article class="track-card"><div class="track-cover" style="--ca:${a};--cb:${b}">${t.cover?`<img src="${esc(t.cover)}" alt="" loading="lazy" onerror="this.remove()">`:''}<span>♫</span></div><div class="track-main"><div class="track-meta"><span class="id">#${t.id}</span><span class="tag">${esc(t.category||'À classer')}</span></div><div class="title">${esc(t.title)}</div><div class="artist">${esc(t.artist)} · ${esc(t.album||'Sans album')}</div>${t.moods?.length?`<div class="track-moods">${chips(t.moods.slice(0,4))}</div>`:''}</div><button class="request" data-id="${t.id}"></button></article>`}
+  if(view.level==='albums'){
+    const first=allTracks.find(t=>originalCategory(t)===view.category);
+    const meta=genreMetaByName(view.category,first?.genre_slug||'');
+    if(!meta){c.hidden=true;c.innerHTML='';return}
+    const genreFr=meta.name_fr||frCategory(first)||meta.name||view.category;
+    const descFr=meta.description_fr||meta.description||'';
+    c.hidden=false;
+    c.innerHTML=`<div class="context-genre">${imgSrc(meta)?`<img src="${esc(imgSrc(meta))}" alt="" loading="lazy">`:''}<div><span class="kicker">Genre</span><h2>${esc(genreFr)}</h2><p>${esc(descFr)}</p><div class="context-stats"><strong>${groupAlbums(view.category).length}</strong> album${groupAlbums(view.category).length>1?'s':''}</div></div></div>`;
+    return;
+  }
+
+  if(view.level==='tracks'){
+    const tracks=tracksFor(view.category,view.album);
+    const t=tracks[0];
+    const meta=albumMetaByName(view.album,view.category,t?.album_slug||'');
+    if(!t){c.hidden=true;c.innerHTML='';return}
+    const src=imgSrc(meta,t?.cover||'');
+    const albumFr=meta?.name_fr||frAlbum(t);
+    const albumOriginal=meta?.name_original||originalAlbum(t);
+    const genreFr=meta?.genre_fr||frCategory(t);
+    const moodsFr=meta?.moods_fr||t.moods_fr||meta?.moods||[];
+    c.hidden=false;
+    c.innerHTML=`<div class="context-album">${src?`<img class="album-hero-cover" src="${esc(src)}" alt="${esc(albumFr)}" loading="lazy">`:''}<div><span class="kicker">${esc(genreFr)}</span><h2>${esc(albumFr)}</h2>${originalLine(albumFr,albumOriginal)}<p class="album-artist">${esc(meta?.artist||t?.artist||'StreamBeats')}</p><div class="context-stats">${meta?.year?`<strong>${meta.year}</strong> · `:''}${meta?.duration?`${esc(meta.duration)} · `:''}<strong>${tracks.length}</strong> morceau${tracks.length>1?'x':''}</div><div class="moods">${chips(moodsFr)}</div>${meta?.spotify?`<div class="album-links"><a href="${esc(meta.spotify)}" target="_blank" rel="noopener">Spotify ↗</a></div>`:''}</div></div>`;
+  }
+}
+
+function trackCard(t){
+  const[a,b]=colors(originalCategory(t));
+  const titleFr=frTitle(t), titleOriginal=originalTitle(t);
+  const albumFr=frAlbum(t), albumOriginal=originalAlbum(t);
+  const moods=t.moods_fr||t.moods||[];
+  return `<article class="track-card"><div class="track-cover" style="--ca:${a};--cb:${b}">${t.cover?`<img src="${esc(t.cover)}" alt="" loading="lazy" onerror="this.remove()">`:''}<span>♫</span></div><div class="track-main"><div class="track-meta"><span class="id">#${t.id}</span><span class="tag">${esc(frCategory(t))}</span></div><div class="title">${esc(titleFr)}</div>${originalLine(titleFr,titleOriginal)}<div class="artist">${esc(t.artist)} · ${esc(albumFr)}</div>${originalLine(albumFr,albumOriginal)}${moods.length?`<div class="track-moods">${chips(moods.slice(0,4))}</div>`:''}</div><button class="request" data-id="${t.id}"></button></article>`;
+}
 function bindTrackButtons(){document.querySelectorAll('.request').forEach(b=>b.addEventListener('click',e=>{e.stopPropagation();requestTrack(b.dataset.id)}));updateButtons()}
 function updateButtons(){document.querySelectorAll('.request').forEach(b=>{const busy=pending.has(String(b.dataset.id));b.disabled=busy;b.textContent=busy?'Ajout…':(liveOnline&&directRequests?'Ajouter à la file':'Copier !song');b.classList.toggle('fallback-btn',!(liveOnline&&directRequests))})}
-function renderCategories(){const cats=groupCategories();$('#count').textContent=`${cats.length} genre${cats.length>1?'s':''}`;$('#modehint').textContent=`${allTracks.length} morceaux disponibles`;$('#grid').innerHTML=cats.map(g=>{const meta=genreMetaByName(g.name,g.genre_slug);return `<article class="browse-card category-card" data-v="${encodeURIComponent(g.name)}">${coverHTML(g,'category')}<div class="browse-body"><span class="kicker">Genre</span><h2>${esc(g.name)}</h2><p class="card-desc">${esc(meta?.description||'')}</p><p><strong>${g.tracks}</strong> morceaux · ${g.albums.size} album${g.albums.size>1?'s':''}</p><button class="open-btn">Explorer <span>→</span></button></div></article>`}).join('');document.querySelectorAll('.category-card').forEach(x=>x.addEventListener('click',()=>setView('albums',decodeURIComponent(x.dataset.v))))}
-function renderAlbums(){const albums=groupAlbums(view.category);$('#count').textContent=`${albums.length} album${albums.length>1?'s':''}`;$('#modehint').textContent=view.category;$('#grid').innerHTML=albums.map(a=>{const meta=albumMetaByName(a.name,a.category,a.album_slug);return `<article class="browse-card album-card" data-v="${encodeURIComponent(a.name)}">${coverHTML(a,'album')}<div class="browse-body"><span class="kicker">${esc(view.category)}</span><h2>${esc(a.name)}</h2><p class="album-card-artist">${esc(meta?.artist||a.artist)}</p><p><strong>${a.tracks}</strong> morceau${a.tracks>1?'x':''}${meta?.year?` · ${meta.year}`:''}${meta?.duration?` · ${esc(meta.duration)}`:''}</p><div class="moods compact">${chips(meta?.moods?.slice(0,5))}</div><button class="open-btn">Voir l'album <span>→</span></button></div></article>`}).join('');document.querySelectorAll('.album-card').forEach(x=>x.addEventListener('click',()=>setView('tracks',view.category,decodeURIComponent(x.dataset.v))))}
-function renderTracks(){const tracks=tracksFor(view.category,view.album);$('#count').textContent=`${tracks.length} morceau${tracks.length>1?'x':''}`;$('#modehint').textContent=view.album;$('#grid').innerHTML=tracks.length?tracks.map(trackCard).join(''):'<div class="empty">Cet album est vide.</div>';bindTrackButtons()}
+function renderCategories(){
+  const cats=groupCategories();
+  $('#count').textContent=`${cats.length} genre${cats.length>1?'s':''}`;
+  $('#modehint').textContent=`${allTracks.length} morceaux disponibles`;
+  $('#grid').innerHTML=cats.map(g=>{
+    const meta=genreMetaByName(g.name,g.genre_slug);
+    const display=meta?.name_fr||g.name_fr||g.name;
+    const desc=meta?.description_fr||meta?.description||'';
+    return `<article class="browse-card category-card" data-v="${encodeURIComponent(g.name)}">${coverHTML(g,'category')}<div class="browse-body"><span class="kicker">Genre</span><h2>${esc(display)}</h2><p class="card-desc">${esc(desc)}</p><p><strong>${g.tracks}</strong> morceaux · ${g.albums.size} album${g.albums.size>1?'s':''}</p><button class="open-btn">Explorer <span>→</span></button></div></article>`;
+  }).join('');
+  document.querySelectorAll('.category-card').forEach(x=>x.addEventListener('click',()=>setView('albums',decodeURIComponent(x.dataset.v))));
+}
+function renderAlbums(){
+  const albums=groupAlbums(view.category);
+  const first=allTracks.find(t=>originalCategory(t)===view.category);
+  $('#count').textContent=`${albums.length} album${albums.length>1?'s':''}`;
+  $('#modehint').textContent=first?frCategory(first):view.category;
+  $('#grid').innerHTML=albums.map(a=>{
+    const meta=albumMetaByName(a.name,a.category,a.album_slug);
+    const albumFr=meta?.name_fr||a.name_fr||a.name;
+    const albumOriginal=meta?.name_original||a.name;
+    const moods=meta?.moods_fr||meta?.moods||[];
+    return `<article class="browse-card album-card" data-v="${encodeURIComponent(a.name)}">${coverHTML(a,'album')}<div class="browse-body"><span class="kicker">${esc(a.category_fr||a.category)}</span><h2>${esc(albumFr)}</h2>${originalLine(albumFr,albumOriginal)}<p class="album-card-artist">${esc(meta?.artist||a.artist)}</p><p><strong>${a.tracks}</strong> morceau${a.tracks>1?'x':''}${meta?.year?` · ${meta.year}`:''}${meta?.duration?` · ${esc(meta.duration)}`:''}</p><div class="moods compact">${chips(moods.slice(0,5))}</div><button class="open-btn">Voir l'album <span>→</span></button></div></article>`;
+  }).join('');
+  document.querySelectorAll('.album-card').forEach(x=>x.addEventListener('click',()=>setView('tracks',view.category,decodeURIComponent(x.dataset.v))));
+}
+function renderTracks(){const tracks=tracksFor(view.category,view.album);$('#count').textContent=`${tracks.length} morceau${tracks.length>1?'x':''}`;$('#modehint').textContent=tracks[0]?frAlbum(tracks[0]):view.album;$('#grid').innerHTML=tracks.length?tracks.map(trackCard).join(''):'<div class="empty">Cet album est vide.</div>';bindTrackButtons()}
 function renderSearch(){const tracks=searchTracks(query);$('#count').textContent=`${tracks.length} résultat${tracks.length>1?'s':''}`;$('#modehint').textContent='Recherche globale';$('#grid').innerHTML=tracks.length?tracks.map(trackCard).join(''):'<div class="empty">Aucun résultat.</div>';bindTrackButtons()}
 function render(){renderBreadcrumb();renderContext();if(query.trim())return renderSearch();if(view.level==='categories')return renderCategories();if(view.level==='albums')return renderAlbums();renderTracks()}
 
 function renderLiveOffline(msg='Le morceau en cours apparaîtra ici pendant le live.'){liveOnline=false;directRequests=false;$('#liveDot').classList.add('offline');$('#liveUpdated').textContent='hors ligne';$('#liveCurrent').innerHTML=`<div><span class="kicker">En cours</span><strong>Le direct musical est hors ligne</strong><span>${esc(msg)}</span></div>`;$('#queueCount').textContent='0';$('#liveQueue').innerHTML='<div class="queue-empty">Aucune file publique pour le moment.</div>';updateLiveMode();updateButtons()}
 function updateLiveMode(){$('#requestStatus').textContent=!liveOnline?'Hors ligne — le bouton copiera la commande chat.':directRequests?'Actives — ajout direct à la file. 1 demande en attente maximum par navigateur.':'Live visible — redémarre le serveur LTC récent pour activer les demandes directes.'}
 async function loadLiveConfig(){try{const r=await fetch('live-config.json',{cache:'no-store'});if(!r.ok)return renderLiveOffline();const c=await r.json();liveEndpoint=(c.endpoint||'').replace(/\/$/,'');if(!liveEndpoint)return renderLiveOffline();await refreshLive();setInterval(refreshLive,3000)}catch(e){renderLiveOffline()}}
-async function refreshLive(){if(!liveEndpoint)return renderLiveOffline();try{const r=await fetch(liveEndpoint+'/live',{cache:'no-store'});if(!r.ok)throw 0;const s=await r.json();liveOnline=true;directRequests=s.requests_enabled===true;$('#liveDot').classList.remove('offline');$('#liveUpdated').textContent='en direct';$('#liveCurrent').innerHTML=s.current?`<div><span class="kicker">En cours</span><strong>${esc(s.current.title)}</strong><span>${esc(s.current.artist)} · ${esc(s.current.album||'')} · ${esc(s.current.category||'')}</span></div>`:'<div><span class="kicker">En cours</span><strong>Aucun morceau</strong><span>Le lecteur attend le prochain titre.</span></div>';const q=Array.isArray(s.queue)?s.queue:[];$('#queueCount').textContent=s.queue_length||q.length||0;let h=q.slice(0,5).map(x=>`<div class="queue-row"><span class="queue-pos">${x.position}</span><div><strong>${esc(x.title)}</strong><span>${esc(x.requested_by?('Demandé par '+x.requested_by):(x.album||''))}</span></div></div>`).join('');if(q.length>5)h+=`<div class="queue-more">+ ${q.length-5} autre${q.length-5>1?'s':''} demande${q.length-5>1?'s':''}</div>`;$('#liveQueue').innerHTML=h||'<div class="queue-empty">File vide : lecture automatique dans le même album, puis le même genre.</div>';updateLiveMode();updateButtons()}catch(e){renderLiveOffline('Le relay ne répond pas actuellement.')}}
-function surprise(){let pool=allTracks;if(view.level==='albums'&&view.category)pool=allTracks.filter(t=>(t.category||'À classer')===view.category);if(view.level==='tracks'&&view.album)pool=tracksFor(view.category,view.album);if(!pool.length)return toast('Aucun morceau disponible.',true);const t=pool[Math.floor(Math.random()*pool.length)];setView('tracks',t.category||'À classer',t.album||'Sans album');setTimeout(()=>document.querySelector(`.request[data-id="${t.id}"]`)?.scrollIntoView({behavior:'smooth',block:'center'}),150)}
+async function refreshLive(){
+  if(!liveEndpoint)return renderLiveOffline();
+  try{
+    const r=await fetch(liveEndpoint+'/live',{cache:'no-store'});
+    if(!r.ok)throw 0;
+    const s=await r.json();
+    liveOnline=true;
+    directRequests=s.requests_enabled===true;
+    $('#liveDot').classList.remove('offline');
+    $('#liveUpdated').textContent='en direct';
+
+    $('#liveCurrent').innerHTML=s.current
+      ?`<div><span class="kicker">En cours</span><strong>${esc(frTitle(s.current))}</strong>${originalLine(frTitle(s.current),originalTitle(s.current))}<span>${esc(s.current.artist)} · ${esc(frAlbum(s.current))} · ${esc(frCategory(s.current))}</span></div>`
+      :'<div><span class="kicker">En cours</span><strong>Aucun morceau</strong><span>Le lecteur attend le prochain titre.</span></div>';
+
+    const q=Array.isArray(s.queue)?s.queue:[];
+    $('#queueCount').textContent=s.queue_length||q.length||0;
+    let h=q.slice(0,5).map(x=>`<div class="queue-row"><span class="queue-pos">${x.position}</span><div><strong>${esc(frTitle(x))}</strong>${originalLine(frTitle(x),originalTitle(x))}<span>${esc(x.requested_by?('Demandé par '+x.requested_by):frAlbum(x))}</span></div></div>`).join('');
+    if(q.length>5)h+=`<div class="queue-more">+ ${q.length-5} autre${q.length-5>1?'s':''} demande${q.length-5>1?'s':''}</div>`;
+    $('#liveQueue').innerHTML=h||'<div class="queue-empty">File vide : lecture automatique dans le même album, puis le même genre.</div>';
+    updateLiveMode();
+    updateButtons();
+  }catch(e){
+    renderLiveOffline('Le relay ne répond pas actuellement.');
+  }
+}
+function surprise(){let pool=allTracks;if(view.level==='albums'&&view.category)pool=allTracks.filter(t=>originalCategory(t)===view.category);if(view.level==='tracks'&&view.album)pool=tracksFor(view.category,view.album);if(!pool.length)return toast('Aucun morceau disponible.',true);const t=pool[Math.floor(Math.random()*pool.length)];setView('tracks',originalCategory(t),originalAlbum(t));setTimeout(()=>document.querySelector(`.request[data-id="${t.id}"]`)?.scrollIntoView({behavior:'smooth',block:'center'}),150)}
 async function load(){ $('#viewerName').value=localStorage.getItem('ltcMusicViewer')||'';try{const [cat,meta]=await Promise.all([fetch('catalog.json',{cache:'no-store'}),fetch('streambeats-metadata.json',{cache:'no-store'}).catch(()=>null)]);if(!cat.ok)throw 0;allTracks=await cat.json();allTracks=allTracks.map(t=>({...t,category:t.category||'À classer',album:t.album||'Sans album',cover:t.cover||''}));if(meta?.ok)sbMeta=await meta.json()}catch(e){$('#grid').innerHTML='<div class="empty">Le catalogue musical n’est pas encore publié.</div>';$('#count').textContent='Catalogue indisponible';return}view=viewFromUrl();history.replaceState({...view},'',urlForView(view.level,view.category,view.album));render();loadLiveConfig()}
 $('#search').addEventListener('input',e=>{query=e.target.value;render()});$('#randomBtn').addEventListener('click',surprise);$('#viewerName').addEventListener('change',saveViewer);load();
