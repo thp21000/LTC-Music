@@ -5,7 +5,7 @@ const pending=new Set();
 const PALETTE=[['#0B4C55','#0E6872'],['#2F673A','#4D8757'],['#77542E','#A17843'],['#5B456F','#80639A'],['#7A3948','#A65368'],['#315B77','#4E7D9E'],['#655E2E','#8F8643'],['#6E4535','#96614B']];
 
 const $=s=>document.querySelector(s);
-function esc(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[c]))}
+function esc(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot',"'":'&#039;'}[c]))}
 function hash(s){let h=0;for(const c of String(s)){h=((h<<5)-h)+c.charCodeAt(0);h|=0}return Math.abs(h)}
 function colors(n){return PALETTE[hash(n)%PALETTE.length]}
 function initials(s){return String(s||'?').split(/\s+/).filter(Boolean).slice(0,2).map(x=>x[0]).join('').toUpperCase()}
@@ -18,7 +18,8 @@ async function copyCommand(id){
   const cmd='!song #'+id;
   try{await navigator.clipboard.writeText(cmd)}
   catch(e){const ta=document.createElement('textarea');ta.value=cmd;document.body.appendChild(ta);ta.select();document.execCommand('copy');ta.remove()}
-  toast('Relay hors ligne — commande copiée : '+cmd);
+  const reason=!liveOnline?'Relay hors ligne':(!directRequests?'Ajout direct indisponible — serveur LTC à redémarrer en V1.6':'Commande chat');
+  toast(reason+' — commande copiée : '+cmd);
 }
 
 async function requestTrack(id){
