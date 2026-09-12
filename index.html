@@ -12,19 +12,33 @@
     <header class="hero">
       <div class="eyebrow">La Table des Curieux</div>
       <h1>Choisis la prochaine musique</h1>
-      <p class="lead">Parcours le catalogue StreamBeats autorisé pour le live. Le bouton <strong>Demander</strong> copie une commande prête à coller dans le chat Twitch ou YouTube.</p>
+      <p class="lead">Explore d'abord un style, puis un album, et choisis enfin le morceau que tu veux proposer au live.</p>
       <div class="instructions">
-        <div><strong>Comment ça marche ?</strong><br><span>Choisis un titre → copie la commande → colle-la dans le chat.</span></div>
+        <div><strong>3 étapes</strong><br><span>Style → Album → Morceau</span></div>
         <code>!song #42</code>
       </div>
     </header>
 
+    <section id="livePanel" class="live-panel" hidden>
+      <div class="live-head">
+        <div>
+          <span class="live-dot"></span>
+          <span class="eyebrow live-label">Musique en direct</span>
+        </div>
+        <span id="liveUpdated" class="muted"></span>
+      </div>
+      <div id="liveCurrent" class="live-current"></div>
+      <div class="queue-title">File d'attente <span id="queueCount" class="pill">0</span></div>
+      <div id="liveQueue" class="queue-list"></div>
+    </section>
+
+    <nav id="breadcrumb" class="breadcrumb" aria-label="Navigation"></nav>
+
     <section class="controls">
       <div class="searchrow">
-        <input id="search" class="search" type="search" placeholder="Rechercher un titre, un artiste ou un genre…" autocomplete="off">
-        <button class="btn secondary" id="randomBtn">🎲 Au hasard</button>
+        <input id="search" class="search" type="search" placeholder="Rechercher dans le catalogue…" autocomplete="off">
+        <button class="btn secondary" id="randomBtn">🎲 Surprise</button>
       </div>
-      <div id="filters" class="filters" aria-label="Filtres par catégorie"></div>
     </section>
 
     <div class="summary">
@@ -35,8 +49,8 @@
     <main id="grid" class="grid" aria-live="polite"></main>
 
     <footer class="footer">
-      Catalogue musical limité aux titres StreamBeats sélectionnés par La Table des Curieux.<br>
-      Cette page ne joue aucune musique et n'envoie aucune commande automatiquement : elle prépare uniquement la commande à coller dans le chat.
+      Musiques issues du catalogue StreamBeats sélectionné pour La Table des Curieux.<br>
+      Le bouton de demande copie une commande à coller dans le chat Twitch ou YouTube.
     </footer>
   </div>
 
