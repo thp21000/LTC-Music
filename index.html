@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#0B4C55">
+  <title>La Table des Curieux — Musique</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="wrap">
+    <header class="hero">
+      <div class="eyebrow">La Table des Curieux</div>
+      <h1>Choisis la prochaine musique</h1>
+      <p class="lead">Parcours le catalogue StreamBeats autorisé pour le live. Le bouton <strong>Demander</strong> copie une commande prête à coller dans le chat Twitch ou YouTube.</p>
+      <div class="instructions">
+        <div><strong>Comment ça marche ?</strong><br><span>Choisis un titre → copie la commande → colle-la dans le chat.</span></div>
+        <code>!song #42</code>
+      </div>
+    </header>
+
+    <section class="controls">
+      <div class="searchrow">
+        <input id="search" class="search" type="search" placeholder="Rechercher un titre, un artiste ou un genre…" autocomplete="off">
+        <button class="btn secondary" id="randomBtn">🎲 Au hasard</button>
+      </div>
+      <div id="filters" class="filters" aria-label="Filtres par catégorie"></div>
+    </section>
+
+    <div class="summary">
+      <span id="count">Chargement…</span>
+      <span id="modehint"></span>
+    </div>
+
+    <main id="grid" class="grid" aria-live="polite"></main>
+
+    <footer class="footer">
+      Catalogue musical limité aux titres StreamBeats sélectionnés par La Table des Curieux.<br>
+      Cette page ne joue aucune musique et n'envoie aucune commande automatiquement : elle prépare uniquement la commande à coller dans le chat.
+    </footer>
+  </div>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>
