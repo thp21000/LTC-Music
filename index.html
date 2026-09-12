@@ -8,59 +8,52 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="wrap">
-    <header class="hero">
-      <div class="eyebrow">La Table des Curieux</div>
-      <h1>Choisis la prochaine musique</h1>
-      <p class="lead">Explore un style, choisis un album, puis sélectionne le morceau que tu veux proposer au live.</p>
+<div class="wrap">
+  <header class="hero">
+    <div class="eyebrow">La Table des Curieux</div>
+    <h1>Choisis la prochaine musique</h1>
+    <p class="lead">Explore un style, choisis un album, puis ajoute directement un morceau à la file du live.</p>
 
-      <section id="livePanel" class="live-panel" aria-live="polite">
-        <div class="live-head">
-          <div>
-            <span class="live-dot"></span>
-            <span class="eyebrow live-label">Musique en direct</span>
-          </div>
-          <span id="liveUpdated" class="muted">hors ligne</span>
+    <section class="live-panel hero-live" aria-live="polite">
+      <div class="live-head">
+        <div><span id="liveDot" class="live-dot offline"></span><span class="eyebrow live-label">Musique en direct</span></div>
+        <span id="liveUpdated" class="muted">hors ligne</span>
+      </div>
+
+      <div id="liveCurrent" class="live-current">
+        <div><span class="kicker">En cours</span><strong>Le direct musical est hors ligne</strong><span>Le morceau en cours apparaîtra ici pendant le live.</span></div>
+      </div>
+
+      <div class="queue-title">File d'attente <span id="queueCount" class="pill">0</span></div>
+      <div id="liveQueue" class="queue-list"><div class="queue-empty">Aucune file publique pour le moment.</div></div>
+
+      <div class="identity-row">
+        <div class="identity-copy">
+          <span class="kicker">Demandes depuis le site</span>
+          <span id="requestStatus">Hors ligne — le bouton copiera la commande chat.</span>
         </div>
-
-        <div id="liveCurrent" class="live-current">
-          <div>
-            <span class="kicker">En cours</span>
-            <strong>Le direct musical est hors ligne</strong>
-            <span>Le morceau en cours et la file apparaîtront ici pendant le live.</span>
-          </div>
-        </div>
-
-        <div class="queue-title">File d'attente <span id="queueCount" class="pill">0</span></div>
-        <div id="liveQueue" class="queue-list">
-          <div class="queue-empty">Aucune file publique pour le moment.</div>
-        </div>
-      </section>
-    </header>
-
-    <nav id="breadcrumb" class="breadcrumb" aria-label="Navigation"></nav>
-
-    <section class="controls">
-      <div class="searchrow">
-        <input id="search" class="search" type="search" placeholder="Rechercher un titre, un album ou un style…" autocomplete="off">
-        <button class="btn secondary" id="randomBtn">🎲 Surprise</button>
+        <input id="viewerName" class="viewer-name" maxlength="30" placeholder="Ton pseudo (facultatif)" autocomplete="nickname">
       </div>
     </section>
+  </header>
 
-    <div class="summary">
-      <span id="count">Chargement…</span>
-      <span id="modehint"></span>
+  <nav id="breadcrumb" class="breadcrumb" aria-label="Navigation"></nav>
+
+  <section class="controls">
+    <div class="searchrow">
+      <input id="search" class="search" type="search" placeholder="Rechercher un titre, un album ou un style…" autocomplete="off">
+      <button class="btn secondary" id="randomBtn">🎲 Surprise</button>
     </div>
+  </section>
 
-    <main id="grid" class="grid" aria-live="polite"></main>
+  <div class="summary"><span id="count">Chargement…</span><span id="modehint"></span></div>
+  <main id="grid" class="grid" aria-live="polite"></main>
 
-    <footer class="footer">
-      Musiques issues du catalogue StreamBeats sélectionné pour La Table des Curieux.<br>
-      Le bouton de demande copie une commande à coller dans le chat Twitch ou YouTube.
-    </footer>
-  </div>
-
-  <div id="toast" class="toast" role="status" aria-live="polite"></div>
-  <script src="app.js"></script>
+  <footer class="footer">
+    Quand le live est actif, les demandes sont ajoutées directement à la file. Hors live, le bouton copie une commande <code>!song #ID</code> utilisable dans le chat.
+  </footer>
+</div>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+<script src="app.js"></script>
 </body>
 </html>
